@@ -1,0 +1,18 @@
+/* Whilst unit testing is the technique used to automatically check the code works correctly, Test-Driven Development (TDD) is a methodology
+	* i.e. It is how to apply unit testing to your projects
+ * The aim of using TDD is to eliminate the need to to any manual testing of the code modules
+	 * Therefore you can speed up the development process
+ * The most important part of the process is that you define the task as a series of unit tests and then write your code to pass the tests
+ * You should adhere to the following procedure when writing code:
+	 * Think about the next small step you want to do
+	 * Write a single test to describe what you want to do
+	 * Write some code to try and pass the test (regularly run the failing test)
+	 * When the test passes, run the entire test suite to check nothing else is broken
+	 * Commit the working code to git
+ * Note: to speed up your development process you should consider using the watch mode
+	 * This runs the test suite every time you save changes
+	 * To run this process in the terminal, use 'npm run watch'
+ * Note: test placeholders can be used
+	 * This is achieved by writing the name of the test without the callback implementation
+	 * To do this you should use the .todo modifier after the test keyword
+		 * e.g. test.todo('test case here')

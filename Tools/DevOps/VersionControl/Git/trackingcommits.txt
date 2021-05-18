@@ -1,0 +1,17 @@
+* Once you have multiple commits it becomes important to be able to see your commit history
+* This is done using the 'log' subcommandlog
+	* e.g. git log
+		* To navigate the log, use f (forward), b (backwards) or q (quit)
+	* There are multiple flags / options for formatting purposes:
+		* --abbrev-commit ~ abbreviates the commit ID
+		* --oneline ~ displays each commit on a single line (inc. with an abbreviated ID)
+		* --graph ~ displays items as a graph
+* We can view past version of code by using the subcommand 'checkout', followed by the ID of a commit
+	* e.g. git checkout 36c3add
+	* Using master in the place of the ID will refer you to the most recent commit:
+		* e.g. git checkout master
+* Note: only commit working code to Git
+* To roll back to the last known good code commit, use the 'reset' subcommand with double flag hard (i.e. hard)
+	* e.g. git reset --hard
+* If you've committed bad code, use add 'HEAD^' to the end of said command 
+	* e.g. git reset --hard HEAD^

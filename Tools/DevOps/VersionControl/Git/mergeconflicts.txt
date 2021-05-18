@@ -1,0 +1,9 @@
+* When all the changes in the code occur on different lines or in different files, Git will successfully merge commits without your help. 
+* However, when there are conflicting changes on the same lines, a “merge conflict” occurs 
+	* This is because Git doesn't know which code to keep and which to discard
+* We have to resolve this issue manually
+* Looking at the master branch's code:
+	* There are two versions of one of the lines of code in your file
+		* The one above the ========= is the version that was in the master branch before we tried to merge the new version
+		* below is the version we were trying to merge
+	* To resolve this issue, simply delete the version we don't want, along with the merge conflict markers, then add & commit again

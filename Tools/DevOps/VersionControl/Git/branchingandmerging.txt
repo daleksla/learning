@@ -1,0 +1,21 @@
+* Up until now, we have been making our commits one after the other
+* Whist this is simpler, it means that all our commits are lumped together
+* 'Branching' allows you to work on and test a new feature in isolation
+	* Once this is complete, you can merge the working set of code back into the main workflow
+	* This ensures the main workflow is only comprises of completed features & therefore team members can work on different features without compromising the code in the main branch
+	* The main branch has the ame 'master' ~ this is the branch we take from & merge to
+	* Before this is possible, changes are needed to our git configuration using the following commands:
+		* git config --global merge.ff no
+		* git config --global pull.ff yes
+		* git config --list
+	* The first step is to check we are the master branch, using the 'branch' subcommand
+		* e.g. git branch 
+		* the output produced should include '*' symbol by the word 'master' (e.g. * master)
+	* Now we can create our new branch, using the subcommand 'branch' followed by the new branch name
+		* e.g. git branch tracking-commits
+	* Then we need to switch branches, using the 'checkout' subcommand followed by the relevant branch name
+		* e.g. git checkout tracking-commits
+	* Finally, when our modifications are complete, switch back to the master branch & use the 'merge' subcommand, followed by the branch to be merged with (i.e. tracking-commits)
+		* e.g. git checkout master && git merge tracking-commits
+	* Note: delete extra branches when done using the subcommand 'branch', option 'd', followed by the alternate branch
+		* e.g. git branch -d tracking-commits

@@ -1,0 +1,38 @@
+/* There are two types of CSS (ie. how it can be used) 
+ * The first type is 'inline CSS' - this is where a style is applied to individual html elements using the 'style' attribute
+	 * However, this can cause long-term issues, such as having to update / write the attribute 'style' and it's settings for each tag
+* The second type of CSS solves this issues - 'internal css' uses a one-time <style> tag (typically between the <head> tags at the start of the page)
+	* This automatically applies the style to the matching elements of the 
+	* However, this means every HTML page created would require the <style> tag to included 
+* External CSS uses a seperate text file (with a .css extension) to hold all the rules / desired settings
+	* All that is required is that in the head section (between the <head> tags at the beggining of a HTML file), we use a <link> tag to link the two files together
+	* e.g <link rel="stylesheet" type="text/css" href="stylesheet.css"> */
+
+h1 {
+  color: blue; 
+	/* Note this term is extremely vague
+	 * either use predefined colour keywords (such as 'teal')
+	 * or use a precise colour by specifyig its RGB components
+		 * this can be accomplished by
+			 * using rgb(deenary, deenary, deenary)
+			 * using a # followed by a hexadecimal rgb value
+	 * we can also define colour using hue, saturation & lightness
+		 *  this can be done using hsl(deenary, deenary, deenary) */
+  font-size: 7vh;
+	/* There are many ways to provide a length in CSS
+		 * One is pixels (px) ~ number of onscreen pixels (absolute)
+		 * Another is em ~ it is a (relative) multiplier of the default font size (1em = width of letter 'm')
+		 * Another is & ~ it is a (relative) percent of the default font size 
+		 * Another is amount in points (pt) ~ it is an (absolute unit) ; a point is 1/72 of an inchalign-content
+     * Another is viewport width (vw) ~ proportion of viewport width (100 = full width) (absolute)
+     * Fianlly, viewport height (vh) ~ is the proportion of viewport height (100 = full height) (absolute) */
+}
+
+/* Each block start with an element / tag in which it's properties are (re-)defined
+	 * The element name is known as a 'selector'
+* Following the selector are a pair of '{}', enclosed within the declarations
+* Each declaration contains two parts
+	* The Property definining the type of change desired
+	* The value we would like to assign to said property
+	* The two are seperated by a ':'
+* Each declaration ends with a ';' */

@@ -1,0 +1,146 @@
+/* The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning 
+ * A HTML element becomes a grid container when its display property is set to grid / inline-grid
+ * Note: When developing adaptive layouts you should always start by designing a layout for a narrow screen and then make changes to suit the wider screens. 
+	 * Its much harder to work the other way around */
+
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* In the following code we will define a grid with a single column and four rows (for each of the 4 page elements)
+ * To do so, we will
+	 * set the 'display' property to "grid"
+	 * define the heights of each row using the 'grid-template-rows' property
+	 * assign a label / name to each box */ 
+body {
+  max-width: 800px;
+  margin: auto;
+  height: 250px;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+	/* the first, second and fourth rows will resize to accomodate their content
+	 * meanwhile the third row = 1fr (fraction)
+		 * fr stands for fraction - in this case the third row will take all remaining space */
+  grid-template-areas: "head"
+                       "nav"
+                       "main"
+                       "foot";
+}
+
+/* We have modified the following code to set the property 'grid-area' as "head"
+ * This is the one of the four ID's we created as a grid template area 
+ * This tells each of the page elements where it should be displayed */
+header {
+	grid-area: head ;
+  background-color: #AAA;
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header > h1 {
+  font-family: verdana;
+}
+
+/* We have modified the following code to set the property 'grid-area' as "nav"
+	 * This is the one of the four ID's we created as a grid template area 
+ * This tells each of the page elements where it should be displayed */
+nav {
+	grid-area: nav ;
+  background-color: #CCC;
+}
+
+nav > ol {
+  background-color: #BBB;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ol > li {
+  background-color: #999;
+  margin: 0;
+  padding: 1em;
+  width: auto;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+nav > ol > li:hover > a {
+  color: white;
+}
+
+nav > ol> li > a {
+  text-decoration: none;
+  color: black;
+}
+
+nav > ol> li:hover {
+  background-color: #333;
+  cursor: pointer;
+}
+
+/* We have modified the following code to set the property 'grid-area' as "nav"
+	 * This is the one of the four ID's we created as a grid template area 
+ * This tells each of the page elements where it should be displayed */
+main {
+	grid-area: main ;
+  background-color: #DDD;
+  padding: 1em;
+  column-count: 3;
+  column-width: 180px;
+  column-gap: 1em;
+  column-rule: 1px solid grey;
+}
+
+main > p {
+  margin-bottom: 0.2em;
+  text-indent: 0.5em;
+  break-inside: avoid-column;
+  text-align: justify;
+}
+
+main > p:first-child {
+  text-indent: 0;
+  font-style: italic;
+  margin-bottom: 0.4em;
+  border-left: 1px solid grey;
+  padding-left: 0.8em;
+  column-span: all;
+}
+
+/* We have modified the following code to set the property 'grid-area' as "foot"
+	 * This is the one of the four ID's we created as a grid template area 
+ * This tells each of the page elements where it should be displayed */
+footer {
+	grid-area: foot ;
+  background-color: #AAA;
+}
+
+footer > p {
+  margin: 0.5em;
+}
+
+/* The following code will be applicable if the width of the browser window > 600px wide
+ * We will redefine the grid's layout whilst using the same tag names / ID's */
+@media(min-width: 600px) {
+  body {
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 150px 1fr; /* since we want two columns, we need to use this property ('grid-template-columns') 
+																			 * This defines two columns, the first is 150px wide (narrower) and the second takes up all the remaining space */
+    grid-template-areas: "head head" 
+                         "nav  main"
+                         "nav  foot";
+		/* the header will occupy the first two columns / top row
+		 * the nav will occupy the remaining left of the column
+		 * the main will occupy the right column, second row
+		 * the footer will occupy the right column, third row */
+  }
+}
+
+/* The following code will set all ordered list's between the <nav> tags to the same width */
+nav > ol > li {
+	width: 100% ;
+}

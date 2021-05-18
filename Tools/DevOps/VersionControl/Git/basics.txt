@@ -1,0 +1,7 @@
+* Version control is a process which using a range of tools to help you manage changes to code in a controlled manner
+* A version control system is a piece of software which helps you manage this process - Git is a common and widely adopted one
+
+* Git is a terminal-based software
+* It consists of a series of sub-commands added to the git command
+	* e.g. git status // this command lists all the files that have been modified / added
+* Avoid using GUI tools as they do not cover all commands (ie. they cover common use-cases) & in future organisations you work for may not have access to it / use it

@@ -1,0 +1,10 @@
+ * The Ava testing tools is what we should use - it supports ES6 modules easily as well as having a simple syntax
+	 * You will need to install ava using the command 'npm' (like all installations of external modules), as well as the subcommand 'init ava'
+	 * You will also need to regularly install the 'esm' package (this will recognise ES6 modules)
+		 * Note: there needs to be an ava section in the package manifest to tell it to use the esm package
+			 * e.g. "ava": {
+					  "verbose": true, //the 'verbose' flag tells the tool to list each test whether it has passed or failed
+					  "require": [ //the 'require' flag imports the esm package
+						"esm"
+					  ]
+					 }

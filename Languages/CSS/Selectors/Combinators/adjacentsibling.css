@@ -1,0 +1,18 @@
+/* Up to now we have used selectors to select based on element, attribute, class or identifier. In this exercise we will learn how to select html elements based on the elements furtehr up in the hierarchy.
+ * To understand this we need to use some terms to describe the relationships between the elements. 
+	 * Parent ~ The element directly above the element. Each element has one and only one parent element. 
+	 * Descendant ~ Any element that is inside another element no matter how nested this is. 
+	 * Child ~ An element directly underneath its parent. 
+	 * Sibling ~ An element at the same level. */
+
+/* Adjacent sibling combinators will only match the second element if it immediately succeeds the first element 
+ * A '+' symbol is placed between the selectors 
+ * The following code will colour the paragraph immediately after the top-level heading (h1) in darkred */
+h1 + p {
+  color: darkred ;
+}
+
+/* The following code will colour the secondary ordered list succeeding the first */
+li + ol { 
+	color: darkred ; 
+}

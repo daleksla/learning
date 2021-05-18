@@ -1,0 +1,14 @@
+#!/bin/bash //program to be executed in bash
+
+set -e # abort script at first error
+
+echo "PRE-COMMIT"
+
+EMAIL=$(git config user.email) //execute and save result of user's email property to a variable
+echo "registered email: ${EMAIL}"
+
+if [[ $EMAIL != *"@coventry.ac.uk" ]] //if the email extension is not correct (so we aren't using enterprise server)
+then
+	echo "You are not pushing to the correct server!
+	exit 1 //non-zero error msg indicates error
+fi

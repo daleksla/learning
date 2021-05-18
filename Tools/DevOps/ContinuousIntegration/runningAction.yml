@@ -1,0 +1,29 @@
+ # GitHub Actions are defined in yaml files (.yml) 
+	 # They are stored in the .github/workflows/ directory
+	 # Note: Indentation is required in yaml files
+ # There are key parts you need to include in each action:
+	 # A name (e.g. this file is called 'runningSingleAction')
+	 # What git actions will trigger the workflow (e.g. whenever any branch is pushed to the server)
+	 # Each pipeline consists of multiple jobs - each action is labelled
+	 # Each job runs on a server of a specific OS which we specify with the 'runs-on' property - here we run our actions on the latest-ubuntu (ie. latest version of Linux Ubuntu OS)
+	 # There are some pre-built actions that we can use- to call them, we put the name of said action as the value of the 'uses' property
+	 # Now we describe the steps for the action to do ('name' attribute) 
+	 # We then run each command ('run' attribute)
+	 
+name: Basic
+on:
+  push:
+    branches: ['*'] #if any branch is pushed on
+jobs:
+  Test: #we call our test "test"
+    runs-on: ubuntu-latest #run it on ubuntu
+    steps: #steps to execute this specific test
+      - uses: actions/checkout@v2 #we can use pre-written actions - this particular one checks out latest commit
+      - name: Run a one-line script #label the following step
+        run: echo Hello, world! #the first step of the test code
+      - name: Run a multi-line script
+        run: | #the second step of the test code - note if the commands will exceed one line, use the '|' followed by as much code as u want
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_EVENT_NAME
+		  
+# The code will run before the commit is ultimately made - this is just an example to show u how to write action code

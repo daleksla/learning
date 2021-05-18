@@ -1,0 +1,93 @@
+/* Each element has a default display property
+ * Usage of the <a> tag, for example, is of an 'inline' type (ie. the space they occupy is only on the line)
+ * Other elements default to a block layout which occupy a “box” on the web page -  these type of elements that we will be considering in this section
+ * We can change an element's default type using the 'display' attribute
+ * Block-level elements consist of several parts:
+	 * content ~ the space occupied by the contents of the elment.
+		 * this is adjustable by manipulating the 'width' and 'height' properties
+	 * border ~ allows us to add a border box around an element with specific thickness, style, colour etc.
+		 * ths is adjustable by using the 'border property'
+	 * padding ~ allows us to add space between the content and the border
+		 * this is adjustable by setting any or all of the 'padding-top', 'padding-right', 'padding-bottom', 'padding-left' properties
+	 * margin ~ allows us to set minimum space between this and other blocks on the page */
+
+@font-face {
+	font-family: quicksand ;
+	src: url(Quicksand-VariableFont_wght.ttf) ;
+}
+
+@font-face {
+	font-family: IBMplexsans ;
+	src: url(IBMPlexSans-Regular.ttf) ;
+}
+
+/* The following code sets a unique font, sets the 'weight' of the font, the space around it & the size */
+header {
+	font-family: quicksand ;
+	font-weight: lighter ;
+	font-size: 1.5em ;
+	padding: 1em ;
+}
+
+/* The following code sets an imported font, a background colour (in hexadecimal) & bottom spacing */
+p {
+	font-family: IBMplexsans ;
+	margin-bottom: 0.5em ;
+}
+
+/* The following code insists the first occurance of the <p> tag has no identation & is italic'd */
+p:first-of-type {
+	text-indent: 0px ;
+	font-style: italic;
+}
+
+/* The following code indents the first line of each paragraph by .5em */
+p::first-line {
+	text-indent : 0.5em ;
+}
+
+/* The following code will remove the default margin and padding
+ * Note: the following makes use of a 'group' selector ~ all variables are applied */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* We can modify the appearance of the hyperlinks based on mouse interaction
+ * The following coe removes the colour of the link's and remove the default underlining */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* The following code will change the background of the list to dark grey upon hovering and change the cursors shape */
+li:hover {
+  background-color: #333;
+  cursor: pointer;
+}
+
+/* The following code will make the whiten the text when a hyperlink is a direct element of the list */
+li:hover > a {
+	color: white ;
+}
+
+/* We can change the display behaviour of a list to make it as a horizontal row / bar
+ * To prevent the list element overflowing the line, the 'container' needs to set an overflow property
+ * By default it displays visible (ie. show extra data) but we need it hidden
+ * The following code will remove the list numbers from the list & set the overflow property to hidden */
+ol {
+	list-style-type: none ;
+	 background-color: #BBB;
+	overflow: hidden ;
+}
+
+/* The following code will style the list items by centering the text, zero-ing the margin, assigning a width of 5em, displays the list element as inline yet blocky and a padding of 1em */
+li {
+	 background-color: #BBB;
+	width: 5em ;
+	margin: 0em ;
+	padding: 1em ;
+	text-align: center ;
+	display: inline-block;
+}
+

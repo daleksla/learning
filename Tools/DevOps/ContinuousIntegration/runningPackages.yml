@@ -1,0 +1,24 @@
+ # Naturally, our code should be used purposefully (ie. not to print meaningful text to the screen etc.)
+ # In this example, we install and run linter on all code pushed
+
+name: Single-Stage
+on:
+  push:
+    branches: ['none'] #if code is pushed to master branch
+  pull_request:
+    branches: ['none'] #if the code is merged on the server (pull request)
+jobs:
+  Linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 #get recent commit
+      - name: Use NodeJS
+        uses: actions/setup-node@v1 #we use another predefined action
+        with: #some actions can have extra parameters
+          node-version: 14.x 
+      - name: install node packages
+        run: npm install #install packages (in the packages.json file - here we also store our alias in it)
+      - name: run the linter
+        run: ./node_modules/.bin/eslint . #run linter
+		# Note: whilst errors brought up by linter result in termination, warnings (such as ';') don't
+		

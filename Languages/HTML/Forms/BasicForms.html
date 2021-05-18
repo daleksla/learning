@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Comparison of three computers</title>
+  <meta name="description" content="headers and footers">
+  <meta name="author" content="Mark Tyers">
+  <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+	<h1>Tell Us About Yourself</h1>
+	
+  <form method="get" action="process.html"> <!-- 'process.html' process the data - this isn't our concern right now -->
+	<!-- the <form> tag encompasses the form ; all elements will be nested within -->
+		<fieldset>
+		<!-- We can break the form into different sections using the <fieldset> tag-->
+			<legend>Basic Details</legend>
+			<!-- the <legend> tag encompasses the section name -->
+			<label>First Name<input type="text" name="firstname" required="true" minlength="2"/></label>
+			<label>Last Name<input type="text" name="lastname" required="true" minlength="2"/></label>
+			<!-- you can set some fields using the 'required' attribute -->
+			<label>Date of Birth<input type="datetime-local" name="dob" /></label>
+		</fieldset>
+		<fieldset>
+			<legend>Other details</legend>
+			<label>Email<input type="email" name="email" /></label>
+			<label>Password<input type="password" name="password" /></label>
+			<label>Age<input type="number" name="age" min="18" max="100"/></label>
+			<!-- you can set certain fields to have a minimum value / no. of characters by using the 'min'/'minlength' & 'max'/'maxlength' attributes -->
+			<label>Color<input type="color" name="color" /></label>
+		</fieldset>
+		<!-- Every input must be wrapped in the <label> tag-->
+		<!-- the <input> tag accepts the user input ; it contains the mandatory 'type' (defines the type of input)
+		 && 'name' (label attached to data) attributes -->
+		<!-- This is used to describe the input to the user-->
+    <input type="submit" name="submit">
+	<!-- at the end of the file, create an <input> tag to collect & submit data for processing -->
+  </form>
+	
+</body>
+</html>

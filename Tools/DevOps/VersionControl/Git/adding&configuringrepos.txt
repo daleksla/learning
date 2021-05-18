@@ -1,0 +1,10 @@
+* We need to create a (local) repository to manage the files in our working directory
+* To do so, use the 'init' subcommand
+	* e.g. git init
+* This creates a hidden directory (called .git) containing the structure of our repository
+* Do not interact with the repository directly - allow git tools to do so
+* To configure the repository, use the 'config' subcommand
+	* To view the current current, use the '-l' option
+		* e.g. git config -l
+	* To configure any of these settings, use the same subcommand, followed by insert-attribute-here "insert-value here"
+		* e.g. git config user.name "Salih"

@@ -1,0 +1,30 @@
+<!-- Here is where we import the JS script into our code
+	 !-- We use the <script> element to import our .js file
+		 !-- Define the 'type' attribute with the value "module" - this allows us to import the script as an ECMA6 module rather than a standard JavaScript file
+			 !-- This means we can make use of this module system to import other JS files directly into our imported file
+		 !-- Define the 'src' attribute as the file name
+ !-- Note: we import the JavaScript file in the head element of our page -->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>My Cool Webpage</title>
+  <meta name="description" content="The simplest possible web page">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="importing.css">
+  <script type="module" src="importing.js"></script> <!-- here we import our JS file -->
+</head>
+
+<body>
+  <h1>Coventry University</h1>
+  <p><a href="https://www.coventry.ac.uk">University Website</a></p>
+  <figure>
+    <img src="coventry_university.jpg" alt="The Alan Berry Building"/>
+    <figcaption>The Alan Berry Building at Coventry University</figcaption>
+  </figure>
+</body>
+</html>

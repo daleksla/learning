@@ -1,0 +1,6 @@
+/* We use client-side JavaScript to interact with contents of a webpage
+	 * e.g. hide or show content, apply different styles, etc.
+ * Our JS code, to do so, must be able to reference our HTML file
+	 * The Document Object Model (DOM) is used for this very purpose - to allow us to interacts with the contents of the webpage
+ * Each html element is represented by a single DOM node
+	 * Therefore, we can use JavaScript to modify the DOM and thus change the content and appearance of your web pages

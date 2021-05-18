@@ -1,0 +1,6 @@
+ * Once the app is correctly configured (described in the 'settingUpHeroku.txt' file), deploying is easy
+ * We simply need to make a git push to the heroku repository
+	 * For example, if I wished to push the master branch to the Heroku Repository / Server:
+		 * git push heroku master
+	 * Note: if the app is not working, consult the log files on the server using the following command:
+		 * heroku logs -t

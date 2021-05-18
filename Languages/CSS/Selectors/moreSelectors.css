@@ -1,0 +1,33 @@
+/* We can use identifiers ('id' attribute in our tags) to style specific areas in our webpage 
+ * e.g. <h2 id="#introduction">...</h2>" 
+ * To define a identifier selector:
+	 * #insert-identifier-name {...} */
+
+#uses {
+  color: olive;
+}
+
+#computers {
+	color : orange ;
+}
+
+#concepts {
+	color : pink ;
+}
+
+/* We can also use 'class' attribute in tags to style multiple elements in our web-page 
+ * e.g. <p class="insert-class-name">...</p> 
+ * To define a class selector:
+	 * .insert-class-name {...} */
+
+.top {
+	color: red ;
+}
+
+.random {
+	color: indigo ;
+}
+
+.disclaimer {
+  color: darkgoldenrod;
+}

@@ -1,0 +1,63 @@
+/* Most projects contain a 'package.json' file - this contains the project's metadata
+ * This is called a 'package manifest'
+ * In this file, there is a property called 'dependencies' - this contains a list of packages needed by the application
+	 * Normally, we'd have to download these packages one at a time
+	 * However, providing we are in the same directory as this packages.json file (& it exists), we can simply write 'npm install'
+		 * This will install all the package dependencies for us
+ * The manifest / metadata file also specifies which version of each package are installed
+ * Conversely, we can also install individual packages and then save it as a dependancy in our metadata file (again, make sure you're in the right directory)
+	 * To do this, we use the --save flag after the 'install' subcommand
+		 * e.g. npm install --save packageName
+ * We can list each package installed using the 'npm' command followed by the list' subcommand
+	 * We can use a --depth flag to show the packages installed
+		 * If we set it to 0 (ie. npm list --depth=0), it'll display just the names of installed packages
+		 * If we set it to 1 (ie. npm list --depth=1), it'll display the installed ppackages and their dependancies
+		 * Finally, providing no value / depth flag will display all packages and their dependencies and the dependencies' dependencies etc. (ie. complete dependency tree)
+ * If you decide to install additional packages, it is very important that these get added to the package.json file so that future installations include these
+	 * To install a package that is used by the script, you need to add the --save flag 
+	 * To install a development tool, use the --save-dev flag
+		 * Note: developer tools are binary executables (such as eslint)
+ * We can include 'script aliases' in our package manifest
+	 * These will allow us to store our path names, options, flags etc.
+		 * For example, we can create an alias to a downloaded developer tools (such as eslint)
+	 * To make alias', we should make a 'script' object and store each alias name & it's actual value (the regular command)
+	 * To then run your script, instead of directly running it as normal, type 'npm' followed by the 'run' & the alias name
+		 * ie. instead of './node_modules/.bin/executable fileName.js', use 'npm run aliasName filename.js'
+ * Note: you cannot comment on a package.json file, it'll cause an error */
+		 
+//below is an example of a package.json file (i've commented for my own purposes)
+
+{
+  "name": "WebServer",
+  "version": "1.0.0",
+  "description": "web server exercises",
+  "main": "koa.js",
+  "scripts": { //aliases are stored here
+    "linter": "./node_modules/.bin/eslint .",
+		"npm-check": "./node_modules/.bin/npm-check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": { //here are where my packages are stored - they are next to their versions
+    "await-fs": "^1.0.0",
+    "fs-extra": "^9.0.1",
+    "handlebars": "^4.7.6",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.4.0",
+    "koa-session": "^6.1.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.3.0",
+    "koa2-formidable": "^1.0.2",
+    "mime-types": "^2.1.27",
+    "node-fetch": "^2.6.1",
+    "npm-check": "^5.9.2",
+    "sqlite-async": "^1.1.0"
+  },
+  "devDependencies": { //here are where my 'developer tools' (binary executables) are stored
+    "eslint": "^7.11.0"
+  }
+}

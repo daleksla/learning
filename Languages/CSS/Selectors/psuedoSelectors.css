@@ -1,0 +1,104 @@
+/* Pseudo-elements are used to style a specific part of an element
+ * They are denoted by a double colon (::) followed by a key-word */
+
+h1 {
+  color: burlywood;
+}
+
+p {
+  text-indent: 1em;
+}
+
+input {
+  margin-left: 0.5em;
+}
+
+/* Below are very common elements */
+
+h2::first-line {
+  font-weight: bold;
+}
+
+h2::first-letter {
+  font-weight: bold;
+}
+
+/* The 'first-of-type' selector modifies the first instance of when the preceeding tag (e.g. <p>) appears */
+p:first-of-type {
+  text-indent: 0;
+}
+
+/* This selector will modify the first letter of the first paragraph in our file */
+p:first-of-type::first-letter {
+  color: red;
+}
+
+/* The 'placeholder' psuedo-element is commonly used in input boxes to 'prompt' the user with a message */
+input::placeholder {
+  color: green;
+}
+
+/* This is a general tag to highlight selected / highlighted text in yellow */
+::selection { 
+	background-color: yellow; 
+}
+
+/* We use the 'before' pseudo-element to add text after the opening tag */
+p::before {
+	/* Note: the 'content' attribute is used */
+  content: open-quote;
+}
+
+/* We use the 'after' pseudo-element to add text prior to the closing tag */
+p::after {
+  content: close-quote;
+}
+
+label::before {
+  content: "😊 ";
+}
+
+p::first-line { 
+	color: red ;  
+	text-transform: uppercase ; 
+}
+
+/* Psueudo-classes are attached to an element and signal a specific state of an element
+ * Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also w/ regards to other factors like the history of the navigator, the mouse's position etc.
+ * For example, we can set a text box being inputted into to display itself differently then when it isn't 
+ * To do this, we use the tag / element name, followed by a single colon (:) & the pseudo-class' name */
+
+/* Notable examples include: 
+	 * The :checked class denotes a radio or checkbox that is currently in a selected state.
+	 * The :first-child class denotes the first sibling of a specified element.
+	 * The :first-of-type class denotes the first sibling of the specified type.
+	 * The :focus class denotes the form field that has currently received the focus (clicked by the user).
+	 * The :hover class denotes the element that the mouse pointer is hovering over.
+	 * The :any-link
+	 * The :link class represents a hyperlink that has not yet been visited. */
+
+p:first-of-type { 
+	color: grey; 
+	text-indent: 0; 
+	font-style: italic; 
+}
+
+/* A solid red border will enclose a input text-box when the data is required */
+input:required { 
+	border: 1px solid red; 
+}
+
+/* This selector will be applied to all <input> tags EXCEPT where it's 'type is 'submit' attribute's value is "submit" (ie. submit button) */
+input:not([type=submit]) { 
+	border: 2px solid purple; 
+}
+
+input:[type=submit] { 
+	border: 2px solid red; 
+}
+
+/* The following code will change the background of the list to dark grey upon hovering and change the cursors shape */
+li:hover {
+  background-color: #333; /* hex for darkgrey */
+  cursor: pointer;
+}

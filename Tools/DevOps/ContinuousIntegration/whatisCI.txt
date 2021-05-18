@@ -1,0 +1,9 @@
+ * 'Client Hooks' are git-hooks which run locally (on our development workstation)
+ * Continuous Integration processes on the other hand are normally run on the server
+ * Therefore, a Continuous Integration (CI) pipeline defines a number of steps to carry out on a project after it is pushed to the GitHub server
+	 * When a step completes without any errors the next step is invoked - if a step fails the process exits and the code is flagged with the issue
+	  * The pipeline is triggered whenever the GitHub server received commits pushed from a developer
+	  * Depending on the results of the pipeline, the commit can be given a health rating which can be used to decide whether the code can be deployed or not
+	  * Note: if you use the Pull Request feature in GitHub, it can be configured to automatically decline to merge code that is flagged as being in poor health
+  * We will be using GitHub Actions to build our CI pipelines
+  * Note: Github Enterprise DOES NOT have Github Actions - to test this, use regular GitHub

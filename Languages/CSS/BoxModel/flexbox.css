@@ -1,0 +1,74 @@
+/* The main idea behind the flex layout is to give the container the ability to alter its items’ width/height (and order)
+ * This is done to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes)
+ * A flex container expands items to fill available free space or shrinks them to prevent overflow.
+ * Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based). 
+	 * This is because while standard elements displaying work well for pages, they lack flexibility to support large or complex applications (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.)
+ * Note: Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts 
+ * There are certain properties we can control, such as:
+	 * display ~ setting it to the value of 'flex' allows us to use flexboxing
+	 * flex-direction ~ allows us to rotate the content to look like a column or a row (we can also use column-reverse, row-reverse to display content backwards)
+	 * justify-content ~ this controls how you can align items on a line using the five commands
+		 * flex-start ~ start of axis
+		 * flex-end ~ end of axis
+		 * center ~ middle of axis
+		 * space-between ~ axisStart->item->space->...->space->item->axisEnd
+		 * space-around ~ axisStart->space->item...->item->space->axisEnd
+	 * align-items ~ this property specifies the default alignment for items inside the flexible container
+		 * flex-start ~ items are positioned at the beginning of the container
+		 * flex-end ~ items are positioned at the end of the container
+		 * center ~ items are positioned at the center of the container	
+		 * stretch ~ items are stretched to fit the container
+		 * baseline ~ items are positioned at the baseline of the container
+	 * align-self ~ this is used to specify the alignment of specific & individual elements, overriding general commands
+		 * the same values used for align-items are used for align-self also 
+	 * flex-wrap ~ by setting to the value of "wrap", we can wrap the content onto multiple lines to not squash the content 
+		 * when setting the 'flex-wrap' property you may choose wrap or wrap-reverse*/
+
+@font-face {
+  font-family: GrenzeGotisch;
+  src: url(GrenzeGotisch-VariableFont_wght.ttf);
+}
+
+h1 {
+  font-family: GrenzeGotisch;
+  font-size: 3em;
+  padding: 0;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+figure {
+  margin: 1em;
+  padding: 0;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 3px 3px 22px -7px rgba(0,0,0,0.75);
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+figcaption {
+  font-size: 1.4em;
+  text-align: center;
+  font-family: GrenzeGotisch;
+  padding-bottom: 0.3em;
+}
+
+/* The following code shows how:
+	 * to create a flexbox layout by changing the 'display' property of the container
+	 * to set the 'flex-direction' as e.g. row (to display it horizontally) 
+	 * to 'wrap' the text so it doesn't become compressed
+	 * to space and layot the content */
+main {
+  display: flex;
+	flex-direction: row ;
+/*   flex-wrap: wrap;
+	height: 1000px ; */
+	justify-content: space-around ;
+	align-content: baseline ;
+}

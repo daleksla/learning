@@ -1,0 +1,124 @@
+/* By default, html block elements stack underneath each other (with possible adjustment by the margin) ~ his is called static positioning
+ * In this exersize will examine ways to position elements ourselves
+ * There are two classic methods
+	 * The fixed method places elements relative to the browser window rather than the content
+	 * The sticky method causes the element to behave statically when it's in it's initial place, but becomes fixed if the element would come off the page (e.g. due to scrolling)
+	 * Note: when using said method, the location where the content will be positioned is required (ie. left=0, right=0, top=0, bottom=0)
+ * We can control the width of elements
+	 * It's desirable for our content to have matching margins on both sides ~ we can achieve this by passing value 'auto' to the 'margin' property
+ * However, even then the problem is that setting a width only works for a specific browser width
+	 * The solution is to allow the content to fill the browser if the screen is narrow but to prevent it getting too wide when viewed on a large screen. 
+	 * This is done by substituting the max-width property for the width */
+
+@font-face {
+	font-family: quicksand ;
+	src: url(Quicksand-VariableFont_wght.ttf) ;
+}
+
+@font-face {
+	font-family: IBMplexsans ;
+	src: url(IBMPlexSans-Regular.ttf) ;
+}
+
+/* The following code uses the 'position' property to fix the footer to the bottom of the page, add a small top border in grey, tweak the padding so the text sits in the middle & centre of the footer & ensure constant visibility */
+footer {
+	font-family: IBMplexans ;
+	position: fixed ;
+  height: 1.5em;
+		height: 1.5em ;
+	bottom: 0 ;
+	border-top: 1px solid grey;
+  padding: .5em;
+  width: 100%;
+}
+
+h1, p {
+	font-family: quicksand ;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+	font-family: IBMplexans ;
+  width: 100%;
+  height: 3em;
+}
+
+header > h1 {
+  margin-top: 0.5em;
+}
+
+nav {
+  background-color: lightblue;
+  border-bottom: 1px solid grey;
+  position: sticky;
+  top: 0;
+}
+
+/* The following code will designate the width of the main section & automatically centre the data (by creating equal margins left and right) */
+main {
+	/* width: 500px ; this code is redundant, we've replaced it with max-width to restrict the width should it possibly get too large */
+	max-width: 800px ;
+	margin: auto ;
+  padding: 1em;
+}
+
+main > p {
+  margin-bottom: 0.1em;
+  text-indent: 0.5em;
+}
+
+main > p:first-of-type {
+  font-style: italic;
+  text-indent: 0;
+  border-left: 1px solid grey;
+  padding-left: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ol {
+	list-style-type: none ;
+	overflow: hidden ;
+}
+
+/* The following code will style the list items by centering the text, zero-ing the margin, assigning a width of 5em, displays the list element as inline yet blocky and a padding of 1em */
+li {
+	width: 5em ;
+	margin: 0em ;
+	padding: 1em ;
+	text-align: center ;
+	display: inline-block;
+}
+
+li:hover > a {
+	background-color: #333;
+  cursor: pointer;
+	color: white;
+}
+
+li > a {
+	color: black ;
+	text-decoration-line: none;
+}
+
+/* Responsive columns is a term used to describe when the number of columns change based on width
+ * There are a number of properties to consider when creating said concept
+	 * column-count ~ max. no of columns to use
+	 * column-width ~ min. width to make a column
+	 * column-gap ~ the gap between columns
+	 * column-rule ~ the vertical line drawn between the columns
+	 * column-span ~ whether the element should span over all the columns
+ * The following code will set the maximum amount of columns as 3, each being at least 250px with a 1em column gap (inc.'s a thin grey rule between each column), as well as stopping column breaks splitting paragraphs (using the 'break-inside' property) */
+main {
+	column-count: 3;
+	column-width: 250px ;
+	column-gap: 1em ;
+	column-rule: 1px solid grey;
+	break-inside: avoid-column
+	text-align: justify /* This ensures the text is justified */
+}
+
+/* The following code will span the first paragraph over all the columns (using the 'column-span' property) */
+main > p:first-of-type {
+	column-span: all ;
+}

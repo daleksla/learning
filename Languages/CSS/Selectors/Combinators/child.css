@@ -1,0 +1,18 @@
+/* Up to now we have used selectors to select based on element, attribute, class or identifier. In this exercise we will learn how to select html elements based on the elements furtehr up in the hierarchy.
+ * To understand this we need to use some terms to describe the relationships between the elements. 
+	 * Parent ~ The element directly above the element. Each element has one and only one parent element. 
+	 * Descendant ~ Any element that is inside another element no matter how nested this is. 
+	 * Child ~ An element directly underneath its parent. 
+	 * Sibling ~ An element at the same level. */
+
+/* A child combinator (>) is placed betwen two CSS selectors
+ * It is used to match only those elements matched by the second selector that is a direct descendant of the first
+ * The following code will colour the paragraph under the heading in green but not the other */
+article > p {
+  color: darkgreen;
+}
+
+/* The following code will colour ONLY the first ordered list (not the second) */
+article > ol > li { 
+	color: teal ; 
+}

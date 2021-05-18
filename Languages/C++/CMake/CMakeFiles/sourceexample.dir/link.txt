@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/sourceexample.dir/sourceexample.cpp.o  -o sourceexample -rdynamic lib/libexample.a 

@@ -1,0 +1,36 @@
+/* Every web-page has a stylesheet provided by the site-designer
+ * However, there are insttances, due to personal preference or poor design, where we wish to use our own stylesheet instead
+	 * User stylesheets override the site's style
+ * Certain plug-in's, such as Chrome's Stylebot, allows you to add your own stylesheet
+ * Open said Stylebot panel by clicking on the extension button to the right of the URL and choose Open Stylebot from the dropdown menu
+ * At the bottom of the Stylebot pane you will see three tabs, select the Code tab
+ * You can now write in your CSS code and this will have an immediate affect on the page */
+
+header {
+  color : pink;
+}
+
+main {
+  color: black ;
+}
+
+p + a {
+  color: pink ;
+}
+
+/* To edit specific areas, we can use the locate the Select an element button in the Stylebot pane
+	 * (this is the button with a square and arrow to the left of the developer tabs)
+ * To locate the area you desire, hover over it till it encapsulates it
+ * This adds a selector to your User Stylesheet that targets the selected element & we can modify it's properties */
+
+div.css-13kxtte.e54yx994 {
+  width: 100% ;
+}
+
+div.css-13kxtte.e54yx994 > li  :hover {
+  color: orange;
+}
+
+div.css-ntfpy7.ep3ww5x1 {
+  min-width: 1000px ;
+}

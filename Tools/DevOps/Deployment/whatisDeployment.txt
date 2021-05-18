@@ -1,0 +1,7 @@
+ * Software deployment is a label for all of the activities that make a software system available for use
+ * One of the key capabilities of any DevOps process is to be able to automatically deploy working software to a live server
+ * Rather than manually setting up a web server, we take advantage of online hosting solutions that can provide pre-configured virtual servers
+	 * These will also contain a suite of tools to manage the deployment process
+	 * These services also provide a number of plug-ins to provide services such as databases, email handlers etc.
+ * We will use Heroku as a hosting platform
+	 * Heroku allows engineers to build and deploy live services using CLI tools that can be run from the terminal

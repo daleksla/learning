@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Audio Media</title>
+  <meta name="description" content="audio media">
+  <meta name="author" content="Mark Tyers">
+</head>
+
+<body>
+  <h1>Audio Media</h1>
+	<p><h2>Wikipedia</h2></p>
+  <audio controls="true" autoplay="true">
+    <source src="./audio/witch.mp3" type="audio/mpeg" />
+    <source src="./audio/witch.ogg" type="audio/ogg" />
+    Your browser does not support the audio tag.
+  </audio>
+  
+	<!-- <audio> is a standard HTML tag to embed audio in webpages -->
+	<!-- Browsers either support .mp3 or .ogg audio files - though Firefox requires the latter -->
+	<!-- 'controls' chooses how the audio players will be displayed (play/pause buttons, duration bar etc.) ; they are customisable -->
+	<!-- 'autoplay' is an optional attribute dictating whether it should autoplay - without declaration it is set to false, declaration alone sets it to true also -->
+	<!-- the 'src' attribute again provides the link to the file, whils the 'type' explicitly dictates the type of file the audio is -->
+	<!-- note that if you provide two (void) <source> tags in the same <audio> tag, it'll display the first version it supports -->
+	<!-- if the audio provided is faulty / cannot be played, the text message after the source tags will be displayed -->
+	
+  <h2>Playing Audio Files from Other Websites</h2>
+  <audio controls="true">
+  	Your browser does not support the &lt;audio&gt; tag. 
+  	<source src="https://www.computerhope.com/jargon/m/example.mp3" />
+	</audio>
+	
+	<h2>Soundbible</h2>
+	<audio controls="true">
+		<source src="http://soundbible.com/grab.php?id=1119&type=mp3" type="audio/mpeg"/>
+		Audio was not loadable
+	</audio>
+	
+	
+</body>
+</html>

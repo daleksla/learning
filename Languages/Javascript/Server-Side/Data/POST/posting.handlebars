@@ -1,0 +1,38 @@
+<!-- In this file we will discuss how to use POST requests in our HTML files 
+ !-- The <form> element has two attributes:
+	 !-- The 'method' attribute - tells the browser to use the POST method and include the form data in the request body
+	 !-- The 'action' attribute - specifies the name of the route we will send the request to
+ !-- The route.post('/quote') method will be triggered upon clicking submit 
+ !-- Note: where we have assigned name's for each input field, we can then use to query in our JavaScript code 
+	 !-- e.g. input box name #1 = "author", therefore we can get this specific property by typing ctx.request.body.author etc. -->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Add Quote</title>
+  <meta name="description" content="form to upload a new quote">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Quotes</h1>
+  <form method="post" action="/quote">
+  <label>Author:
+  <input type="text" name="author" value="{{author}}" />
+  </label>
+  <label>Quote: 
+  <textarea name="quote"></textarea>
+  </label>
+  <label>Password: 
+  <input type="text" name="password" value="{{password}}" />
+  </label>
+  <label>Confirm Password: 
+  <input type="text" name="confirmpassword" value="{{confirmpassword}}" />
+  </label>
+  <input type="submit" />
+  </form>
+</body>
+</html>

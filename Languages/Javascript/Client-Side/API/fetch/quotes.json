@@ -1,0 +1,46 @@
+
+{
+  "title": "Famous Quotes",
+  "quotes": [
+    {
+      "author": "Martin Fowler",
+      "quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
+    },
+    {
+      "author": "Pablo Picasso",
+      "quote": "Computers are useless, they can only give you answers."
+    },
+    {
+      "author": "Edsger Dijkstra",
+      "quote": "If debugging is the process of removing software bugs, then programming must be the process of putting them in."
+    },
+    {
+      "author": "Larry Wall",
+      "quote": "Most of you are familiar with the virtues of a programmer. There are three, of course: laziness, impatience and hubris."
+    },
+    {
+      "author": "Bjarne Stroustrup",
+      "quote": "There's an old story about the person who wished his computer were as easy to use as his telephone. That wish as come true, since I no longer know how to use my telephone."
+    },
+    {
+      "author": "Mark Twain",
+      "quote": "Experience comes from bad judgement."
+    },
+    {
+      "author": "Joseph Campbell",
+      "quote": "Computers are like Old Testament gods; lots of rules and no mercy."
+    },
+    {
+      "author": "Bill Gates",
+      "quote": "Measuring programming progress by lines of code is like measuring aircraft building by weight."
+    },
+    {
+      "author": "Eric S. Raymond",
+      "quote": "Computer Science education cannot make anybody an expert programmer any more than studying brushes and pigments can make somebody an expert painter."
+    },
+    {
+      "author": "Jim Horning",
+      "quote": "Computer Science is the only discipline in which we view adding a new wing to a building as being maintenance."
+    }
+  ] 
+}

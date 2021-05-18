@@ -1,0 +1,17 @@
+ * It is best to write your hooks in either ShellScript (.sh) or Python (.py) - for flexibility and easy, it is best to use Python
+	 * Note: any programming language can we used (such as C++, Java etc.)
+	 
+ * If you are writing in an interpreter-based language (such as Python, ShellScript etc.)
+	 * Write your script as a text file with the line '#!/usr/bin/insert-interpreter-language-here' at the top - this will allow it to be interpretted
+ * If you're using a compiler-based language, no such header is required
+   
+ * When you're done writing your Githook script, it is important to save it and name it correctly 
+	 * This is because, as previously mentioned, Githooks are automatically called (if they exist)
+	 * They must be one of the hooks as outlined on the 'WhatAreHooks.txt' file
+		 * If the program is interpreter-based, move it to the .git/hooks folder & then create a 'hard-link' with the filename & then the desired name using the 'ln -s' command pair
+			 * e.g. ln -s commit-msg-file.py ./commit-msg
+		 * If the program is compiler-based, simply compile and name the file with the desired value
+			 * e.g. g++ commit-msg-file.cpp -o commit-msg
+		 * Note: remember to make the executable / pseudo-executable executable, by using the 'chmod' command
+			 * e.g. chmod 777 commit-msg
+	 

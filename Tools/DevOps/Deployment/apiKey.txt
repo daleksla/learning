@@ -1,0 +1,19 @@
+ * As mentioned in our 'settingUpHeroku.txt', to deploy to our server we need to login
+ * However, logging in manually hinders/prevents automatic deployment
+ * Therefore, a solution is to use an API key which includes all the necessary credentials needed to connect to the server and deploy the app
+	 * Heroku provide a deploy tool which enables you to authenticate using said key instead of requiring the use of a username and password
+	 * Each API key is unique to that deployment and can be re-generated from time to time
+ * Note: you will first of all need to install the 'dpl' tool by running the following commands:
+	  * sudo apt install -y psmisc lsof tree sqlite3 sqlite3-doc build-essential gcc g++ make ruby-dev
+	  * sudo gem install dpl
+  
+  * You will need two pieces of information from your Heroku account
+	  * The account key API_KEY.
+	  * The name of the Heroku app APP_NAME 
+	  * To generate an API key, you can use the Heroku CLI using the following command:
+		 * heroku authorizations:create
+		 * The API key will be the 'Token' property
+	  * The command below will deploy your app:
+		  * dpl --provider=heroku --app=APP_NAME --api-key=API_KEY
+		  * ...where APP_NAME is the server name we assigned in 'settingUpHeroku.txt' & API_KEY is the Token value from the latter command
+ 

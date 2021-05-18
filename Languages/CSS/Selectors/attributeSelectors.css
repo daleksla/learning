@@ -1,0 +1,87 @@
+/* We can use 'attribute selectors' to modify specific sections of a tag
+ * In laments terms, we can write selectors for attributes of elements */
+
+/* Used for elements with a 'title' attribute */
+a[title] {
+  color: purple;
+}
+
+/* Used for elements with a 'href' attribute matching "https://example.org"
+ * Note: common for <a> tags */
+a[href="https://example.org"] {
+  color: green;
+}
+
+/* Used for elements with a 'href' attribute containing "example" 
+ * Note: common for <a> tags */
+a[href*="example"] {
+  font-size: 2em;
+}
+
+/* Used for elements with a 'href' attribute starting with "https://"
+ * Note: common for <a> tags */
+a[href^="https://"] {
+	color: pink ;
+}
+
+/* Used for elements with a href ending with ".org" 
+ * Note: common for <a> tags */
+a[href$=".org"] {
+  font-style: italic;
+}
+
+/* Used for elements whose 'class' attribute contains a certain word */
+a[class~="logo"] {
+  padding: 2px;
+}
+
+form {
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  box-sizing: border-box;
+  width: 250px;
+  text-align: right;
+  margin-bottom: 0.5em;
+}
+
+label.textarea {
+  text-align: left;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+
+textarea {
+  resize: none;
+  width: 252px;
+  border: 1px solid #CCC;
+  text-align: left;
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: "Times New Roman";
+  height: 5em;
+}
+
+input, select {
+  width: 120px;
+  margin-left: 0.5em;
+}
+
+fieldset {
+  border: 1px solid #CCC;
+  margin: 0.5em;
+  width: 100px;
+}
+
+/* This selector targets all input elements with their 'type' attribute set to radio */
+input[type=radio] {
+  width: 20px;
+}
+
+/* This selector targets <input> tags with it's 'type' attribute set to "email" */
+input[type=email] {
+	border: 1px solid red ;
+	/* For 'border' attributes, make sure the width, consistency & colour are set */
+}

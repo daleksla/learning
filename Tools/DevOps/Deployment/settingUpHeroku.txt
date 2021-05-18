@@ -1,0 +1,24 @@
+ * First, you must install Heroku using the following command:
+	 * curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+ * Then, log in (after creating an account) using your credentials using the following command (and entering the necessary information when prompted):
+	 * heroku login -i
+ * Note: we can use an API key to include our credentials for us - see the 'apikey.txt' file
+ * We then need to create a 'stack' - this is essentially an operating system image that is curated and maintained by Heroku
+	 * Heroku will essentially create you a server 
+	 * To do so, we execute the following command:
+		 * heroku create <insert-server-name>
+		 * (Note: do so in the directory containing your 'package.json' file)
+ * Upon doing so, we essentially create a new Git remote (to pull and push data from as we do on Github)
+	  * To see current remotes, use the following command:
+		  * git remote -v
+		  
+ * For the app to deploy successfull on the Heroku server you need to ensure certain information is provided
+	 * You need to enable ES6 modules by adding a 'type' property to the package.json file with a value of module
+	 * You need to specify which version of NodeJS should be installed (on the server)
+		 * This is achieved by editing the package.json file and adding an 'engines' property
+	 * Make sure all packages required to run the server need to be listed with their correct versions in the dependencies section
+	 * Any packages used during the development process but not needed to run the app (such as eslint) should be in the 'devDependencies' section
+	 * The launch script (ie. what triggers the server locally) should be the 'main' property
+	 * Heroku will specify the port to run the server on
+		 * This will be stored on the server in an environment variable called PORT
+		 * Your launch script should use this value if available (ie. find the value Heroku uses on your server and modify your launch script accordingly)

@@ -1,0 +1,40 @@
+<!-- Notice how the extension is .handlebars yet the code within is standard HTML5
+	 !-- This is our template 
+ !-- Within there are two handlebars placeholders
+	 !-- These are identified by having double curly braces around them
+		!-- e.g. example {{title}} 
+ !-- When the template is parsed, handlebars looks for a key in the data object that matches the string inside the double quotes
+ !-- When it finds a match, it replaces the placeholder with the value this key contains 
+ !-- There are a number of tools called 'handlebar helpers' - these allow us to do certain things 
+	 !-- One of these are 'handlebar' conditions, which are the equivalent of if,else statements 
+	 !-- Another is how we can print the contents of array, which the equivalent of iterators in python
+	 !-- Note: it is important to close the helper tags when your done! -->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Home</title>
+  <meta name="description" content="the home page">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>{{title}}</h1> <!-- here is a placeholder for our data -->
+  {{#if date}} <!-- if 'date' property exists... -->
+    <p>{{date}}</p> <!-- do this -->
+  {{else}} <!-- if previous statement didn't run... -->
+    <p>no date provided...</p> <!-- do this instead -->
+  {{/if}} <!-- remember to close if tag! -->
+  <ol> <!-- open tags for list -->
+	  {{#each names}} <!-- our mock for-loop // note: names is our array / list of values -->
+		<li>{{this.name}}</li> <!-- name is the assumed iterator, we use the 'this' object to refer to current object -->
+	  {{/each}} <!-- end of for loops -->
+  </ol>
+  
+</body>
+</html>

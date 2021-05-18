@@ -1,0 +1,17 @@
+* Snapshot is to a repository as screenshot is to a video
+* It's the content (files and folders) of a repository at some point in time (a state of a repository)
+* That content is represented by git's Tree Object and is stored in the .git (repository) folder
+* Git has a 'status' subcommand that scans the working directory and makes two lists:
+	* files modified since last snapshot
+	* files created since last snapchat (untracked files)
+* The process of taking a snapshot of your code is called making a commit
+	* This stores all the changes you made in the repository and is a two-stage process
+		* The first step is to choose the files you want to take a snapshot of
+			* You can choose specific files but normally you would want to take a snapshot of all the files
+				* To do this, we use subcommand add with a double flag / option all (i.e. --all)
+					* e.g. git add --all
+			* Note: use the git subcommand 'status' each time to see the results
+		* The second step is to make the commit - this only affects the file currently staged / added
+			* With each commit requires a short description of the change
+			* Use the subcommand 'commit', with flag / option m (i.e. -m), followed by said description, to do so
+				* e.g. git commit -m 'insert-description-here'

@@ -1,0 +1,85 @@
+/* Media queries allow the content of the page to adapt the type of media (device, browser etc.) it's been viewed on
+ * There are several types of supported media:
+	 * print ~ adapt the content so it's easily printable
+	 * touch mode ~ detect whether a user is viewing your page on a touch screen-enabled device & modify the layout accordingly
+	 * dark mode ~ detect whether the device's dark mode is set and display colours accordingly
+	 * screen size ~ modify the layot based on the screen size */
+
+@font-face {
+  font-family: Plex, Baskervville;
+  src: url(IBMPlexSans-Medium.ttf);
+	src: url(Baskervville-Regular.ttf);
+}
+
+body, h1, h2, p {
+  margin: 0;
+  font-family: Plex, verdana, sans-serif;
+}
+
+body {
+  padding: 1em;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  color: teal;
+  background-color: lightgray;
+  padding: 1em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  border-bottom: 1px solid grey;
+  padding: 0.5em;
+}
+
+@page {
+  size: auto;
+  margin: 2cm;
+}
+
+/* To add media queries to our stylesheet, we use '@media' as a selector 
+ * The following code use's the @media selector to target 'print' media 
+   (ie. the changes to the page in this selector will only be made when it's time to print) 
+ * Note: instead of '@media print', using the '@page' selector is an option also */
+@media print {
+  h1, h2 {
+		font-family: Baskervville ;
+    page-break-before: always;
+    column-span: all;
+    color: black;
+  }
+  h1 {
+		font-family: Baskervville ;
+    margin-top: 10cm;
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+    background-color: #111;
+  }
+  p {
+		font-family: Baskervville ;
+    color: black;
+  }
+  h1 + p {
+		font-family: Baskervville ;
+    text-align: center;
+    font-size: 18pt;
+  }  
+}
+
+/* The code below detects if 'dark mode' is enabled - if so the selector will execute */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+  h1 {
+		color: aquamarine ;
+    background-color: #333;
+  }
+}

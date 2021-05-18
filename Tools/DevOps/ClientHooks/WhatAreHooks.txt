@@ -1,0 +1,12 @@
+* Hooks are files / tools that are automatically run upon a certain Git action occuring
+* In this code, we can write functions to check if the codes needs are validated etc.
+	* If the code eventually returns any code other than 0 (ie non-zero exit code), then the process is aborted
+* We write githooks for the actions:
+	 * pre-commit ~ this hook is run first to check for syntax errors etc.
+	 * prepare-commit-msg ~ this hook is used to create default message before the commit author can enter theirs / personalise is
+	 * commit-msg ~  this hook is used to validate your project state / commit message before allowing a commit to go through
+	 * post-commit ~ this hook is generally used for notification or something similar (such as sending an email to other people saying a sucessful update has been made etc.)
+ * Note: if we commit our file using the no-verify flag, we can avoid any hooks being run
+	 * e.g. git commit -m 'message' --no-verify
+
+ 

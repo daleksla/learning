@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Video Media</title>
+  <meta name="description" content="video media">
+  <meta name="author" content="Mark Tyers">
+</head>
+
+<body>
+	
+  <h1>Video Media</h1>
+  <h2>Playing Video Files</h2>
+	
+  <video width="560" controls>
+    <source src="./video/witch.mp4" type="video/mp4">
+    <source src="./video/witch.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+	
+  <h2>Embedded YouTube Video</h2>
+  <p>You can also embed videos from YouTube!</p>
+  <iframe width="560" title="Monty Python Sketch" height="315" allowfullscreen="true" src="https://www.youtube.com/embed/X2xlQaimsGg" frameborder="0"> </iframe>
+	
+	<!-- similarly to audio, we enclose the video's details in the <video> tag, where we set attributes such as controls but also width, height etc. -->
+	<!-- note that .ogg, as required by firefox, is an audio & video file extension -->
+	<!-- <iframe> is a tag which allows one to embded youtube vidoes -->
+	<!-- a default size is assigned if the paramters wdith and height aren't provided -->
+
+	</body>
+</html>

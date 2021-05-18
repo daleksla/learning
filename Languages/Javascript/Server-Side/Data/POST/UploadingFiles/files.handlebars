@@ -1,0 +1,39 @@
+<!-- If you want to allow your form to handle uploading files you must configure it
+	 !-- The <form> tag must have an 'enctype' attribute set to a value of "multipart/form-data"
+		 !-- e.g. <form method="post" action="/quote" enctype="multipart/form-data">
+ !-- An input element with a type attribute of file is the standard way to allow users to upload files in a form
+	 !-- The input element can take an optional attribute 'accept'
+		 !-- It's value should be the type the user is allowed to upload
+		 !-- If you want to allow multiple file types, they should be separated using commas
+			 !-- You can use the * character as a wildcard
+				 !-- e.g. to accept all text-based formats: accept="text/*"
+	 !-- The input element also has  'multiple' as an attribute
+		 !-- If set to true, the user can upload multiple files -->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Add Quote</title>
+  <meta name="description" content="form to upload a new quote">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Quotes</h1>
+  <form method="post" action="/quote" enctype="multipart/form-data">
+  <label>Author:
+  <input type="text" name="author" />
+  </label>
+  <label>file: <input type="file" name="myfile" multiple />
+  </label>
+  <label>Quote: 
+  <textarea name="quote"></textarea>
+  </label>
+  <input type="submit" />
+  </form>
+</body>
+</html>

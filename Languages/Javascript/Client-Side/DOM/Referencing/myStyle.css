@@ -1,0 +1,59 @@
+/* Here is our CSS file - take note of the classes */
+
+body, h1, p, dl {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-family: verdana, sans-serif;
+  font-weight: 100;
+  padding: 0.5em;
+}
+
+aside {
+  background-color: #CCC;
+  padding: 0.3em;
+}
+
+p {
+  margin: 0.2em 0 0.2em 0;
+}
+
+dl {
+  margin: 0.4em;
+}
+
+.purple {
+  background-color: lightpink;
+  color: purple;
+}
+
+.big {
+  font-size: 4em;
+}
+
+.strong {
+  font-weight: 900;
+}
+
+.person {
+  box-sizing: border-box;
+  font-family: verdana, sans-serif;
+  font-size: 0.9em;
+  color: #333;
+  margin: 1em 0 0.2em 0;
+}
+
+.quote {
+  box-sizing: border-box;
+  padding: 0.3em;
+  border: 1px solid grey;
+  border-radius: 0.4em;
+  background-color: #DDD;
+}

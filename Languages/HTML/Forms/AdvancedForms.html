@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Comparison of three computers</title>
+  <meta name="description" content="headers and footers">
+  <meta name="author" content="Mark Tyers">
+  <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+<h1>Tell Us About Yourself</h1>
+  
+	<form method="get" action="process.html">
+		
+    <label class="textarea">
+      What are your hobbies?
+      <textarea name="hobbies" rows="10" cols="30"></textarea>
+    </label>
+		
+    <label class="textarea">
+      List your three favourite foods
+      <textarea name="favfoods" rows="10" cols="30"></textarea>
+    </label>
+		
+		<!-- To create a multi-line text box (which will retain new lines,tabs,etc.) we use the <label> tag with it's 'class' attribute set to "textarea" -->
+		<!-- within the <label> tags, we added a <textarea> tag, with the attributes name, rows & columns to determine size -->
+		
+    <label>Favourite browser<input type="text" name="browser" list="browsers" /></label>
+    <datalist id="browsers">
+			<option value="Edge">
+			<option value="Firefox">
+			<option value="Chrome">
+			<option value="Opera">
+			<option value="Safari">
+  	</datalist> 
+		
+    <label>Favourite meats<input type="text" name="meats" list="meats" /></label>
+    <datalist id="meats">
+			<option value="Poultry">
+			<option value="Seafood">
+			<option value="Red meat">
+			<option value="Peem">
+  	</datalist> 	
+		
+		<!-- A datalist is the combination of a textbox and a dropdown menu -->
+		<!-- Before creating the list, you first create a <label> element, enclosing a void <input> tag -->
+		<!-- Said input tag will have the attributes 'type', 'name' & 'lists' -->
+		<!-- You start by using the <datalist> tag ; to set the id of the list, use the attribute 'id' and set to the same value as the 'lists' attribute from previously -->
+		<!-- Within the <datalist> tags, use single <option> tags & set their 'value' attribute to an option -->
+		
+	<input type="submit" name="submit">
+  </form>
+	
+</body>
+</html>

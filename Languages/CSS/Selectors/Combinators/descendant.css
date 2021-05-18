@@ -1,0 +1,18 @@
+/* Up to now we have used selectors to select based on element, attribute, class or identifier. In this exercise we will learn how to select html elements based on the elements furtehr up in the hierarchy.
+ * To understand this we need to use some terms to describe the relationships between the elements. 
+	 * Parent ~ The element directly above the element. Each element has one and only one parent element. 
+	 * Descendant ~ Any element that is inside another element no matter how nested this is. 
+	 * Child ~ An element directly underneath its parent. 
+	 * Sibling ~ An element at the same level. */
+
+/* A 'descendant combinator' combines two selectors so that the elements matched by the second selector if they have an ancestor matching the first selector
+ * The two selector names are seperated by a single space
+ * The following code will provide list items with a set sized margin if it's within an article */
+article li {
+  margin: 2em ;
+}
+
+/* The following code will turn all the second-level list items (the book names) to purple */
+ol ol li { 
+	color: purple ; 
+}

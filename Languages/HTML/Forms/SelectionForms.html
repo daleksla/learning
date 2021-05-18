@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Comparison of three computers</title>
+  <meta name="description" content="headers and footers">
+  <meta name="author" content="Mark Tyers">
+  <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+<h1>Tell Us About Yourself</h1>
+	
+  <form method="get" action="process.html">
+    <fieldset>
+      <legend>Gender</legend>
+      <label>Male<input type="radio" name="gender" value="male" /></label>
+      <label>Female<input type="radio" name="gender" value="female" /></label>
+    </fieldset>
+	<fieldset>
+		<legend>Favourite Colours</legend>
+      <label>Red<input type="checkbox" name="colour" value="yes" /></label>
+      <label>Green<input type="checkbox" name="colour" value="yes" /></label>
+      <label>Blue<input type="checkbox" name="colour" value="yes" /></label>
+		</fieldset>
+		<fieldset>
+			<legend>Brothers</legend>
+      <label>Peem<input type="checkbox" name="brothers" value="Peem" /></label>
+      <label>Muf<input type="checkbox" name="brothers" value="Muf" /></label>
+      <label>Huf<input type="checkbox" name="brothers" value="Huf" /></label>
+      <label>Hawe<input type="checkbox" name="brothers" value="Hawe" /></label>	
+		</fieldset>
+		<label>
+      Transport
+      <select required name="transport">
+        <option value="">--choose--</option>
+        <option value="car">Car</option>
+        <option value="bike">Bike</option>
+        <option value="bus">Bus</option>
+      </select>
+    </label>
+    <input type="submit" name="submit">
+  </form>
+	
+	<!-- by setting the attribute 'type' as radio, we can make a single option selection -->
+	
+	<!-- by setting the attribute 'type' as checkbox, we can make a multiple option selection -->
+	
+	<!-- We encompass a drop-down menu using the <select> tag -->
+	<!-- we use the <option> tag for the drop-down -->
+	<!-- the <option> tag contains the attribute 'value' (to be passed if selected) -->
+	<!-- each option (to be selected) is enclosed in <option> tags -->
+	
+	<!-- note, we can set the value of what the selection means (yes, male, etc.) -->
+
+</body>
+</html>

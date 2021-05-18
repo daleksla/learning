@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Headers and Footers</title>
+  <meta name="description" content="headers and footers">
+  <meta name="author" content="Mark Tyers">
+  <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+  <p>A comparison of technical data of three popular 80's home computers:</p>
+  
+	<table>
+    <caption>Technical comparison</caption>
+	<!-- this caption provides the table a name -->
+    <thead>
+	<!-- this tag (<thead>) encompasses the horizontal headers of the table -->
+      <tr>
+	  <!-- all headers are on the same row, so we wrap them in the <tr> (row) tag -->
+        <th>Property</th> <!-- just like <h1>, <h2> etc., these are essentials heading tags -->
+        <th>ZX Spectrum</th>
+        <th>Commodore VIC-20</th>
+        <th>Commodore 64</th>
+      </tr>
+    </thead>
+    <tbody>
+		<!-- this tag (<tbody>) encompasses the rest of the table -->
+      <tr>
+        <th>CPU</th>
+				<!-- using <th> tags here will signify the column headers -->
+        <td>Zilog Z80</td>
+        <td colspan="2">MOS Technology 6510</td>
+		<!-- you can use colspan to leave a gap in the space of the next data attribute. there is also rowspan option-->
+		<!-- however, it is officially used to assign the number of columns a cell will occupy -->
+      </tr>
+      <tr>
+        <th>ROM</th> 
+        <td colspan="2">16 kilobytes</td>
+        <td>20 kilobytes</td>
+      </tr>
+      <tr>
+        <th>RAM</th>
+        <td>64 kilobytes</td>
+        <td>5 kilobytes</td>
+        <td>16 or 64 kilobytes</td>
+      </tr>
+    </tbody>
+  </table>
+	
+	
+</body>
+</html>

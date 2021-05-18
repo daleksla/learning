@@ -1,0 +1,12 @@
+* The next stage is to link your local repository to this GitHub remote
+* In the Terminal, you need to use the remote 'add' subcommand
+	* The alias (name) you want to use to refer to this (the convention is to use the origin alias).
+	* The URL you have copied to the clipboard.
+	* e.g. git remote add origin https://github.coventry.ac.uk/ahmed233/git-exercises
+* Once this is added, you can use the 'remote' subcommand to check the details are correct
+	* e.g. git remote -v
+* The final step is to use the 'push' subcommand to push all your commits to the GitHub server, followed by the alias and branch version you wish to push
+	* e.g. git push origin master
+	* Note: When you enter your password the keystrokes don’t appear (for security reasons)
+	
+* To download the entire repository & it's code to your local computer, you use the 'clone' subcommand, followed by the URL of the repository
