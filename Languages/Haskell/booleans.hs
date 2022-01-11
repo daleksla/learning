@@ -1,6 +1,7 @@
 {-
   This is the file booleans.hs
   In this file will be examples of boolean expressions, such as comparisons and operations
+  Summary: boolean values: True, False. Comparison operators: <, <=, >, >=, ==, /=. Other boolean operators: not, ||, &&
 -}
 
 True -- True. Haskell positive boolean (1)
@@ -23,9 +24,9 @@ not True -- False. NOT operator
 
 -- comparing strings. Boolean operations are limited to comparisons for strings
 "hello" == "world" -- False.
-"a" == 'a' -- ERROR. note: again, strict type setting prevents this comparison 
+-- "a" == 'a' -- ERROR. note: again, strict type setting prevents this comparison 
 "hello" /= "hello" -- True.
-"abc" > "abC" -- True. right my *guess* is the ASCII / Unicode values are counted up. abc has a combined value of 294, abC has a value of 262
+"abc" > "abC" -- True. orders alphabetically
 "abc" >= "abC" -- True.
 "abc" < "abC" -- False.
 "abc" <= "abC" -- False.

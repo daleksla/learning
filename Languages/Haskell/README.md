@@ -6,7 +6,7 @@ As with many programming languages, it is organised modularly, but the concept o
 
 It also has other features, such as:
 * Lazy evaluation - the method which Haskell uses to run it's expressions, such as they are not evaluated when, for example, they are bound to variables, but later such as when their results are needed by other computations
-* Statically typed - Haskell enforces a type system (ie it is aware of what data-types a variable should have), which allows for fast debugging. Unlike other interpreter and compiler software, Haskell is very good at determining the inherent data-types of values, reducing the verbose aspect of such a system.
+* Statically typed, strongly typed - Haskell enforces a type system (ie it is aware of what data-types a variable should have), which allows for fast debugging. Unlike other interpreter and compiler software, Haskell is very good at determining the inherent data-types of values, reducing the verbose aspect of such a system, but they can be specified (which may reduce scope of possible operations in the long run)
   > Note: It is nonetheless standard practice to at least give a signature for your top level functions and objects
 * Compiled or interpreted - Haskell is able to run code it in it's native interpreter or can compile code into an optimised binary
 * Concurrency - Haskell has many libraries to make parallelising code easier
