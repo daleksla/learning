@@ -2,8 +2,10 @@
     This is the file lists.hs
     In this file will be examples of lists and related operations
     Summary: lists must store items of same datatypes. Creation: [<val1>,...,<valn>] . Access operator: <list_name> !! <idx> . Prepending: <element> : <list> .
-    ADDITIONAL: https://wiki.haskell.org/How_to_work_on_lists
+    ADDITIONAL: https://wiki.haskell.org/How_to_work_on_lists . Module Data.List https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-List.html
 -}
+
+import qualified Data.List as DList
 
 -- following are examples of how to create lists
 myList1 = [0, 1, 2, 3]
@@ -51,3 +53,7 @@ all my_test [0,2,3] -- False . note: all returns boolean truth on whether all el
 reverse [1,2,3] -- [2,3,4] . note: reverse returns a list with the order reversed
 
 -- look online for math function such as sum, product, etc.
+
+-- following are examples from Data.List module. See more at https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-List.html
+DList.sort [8,5,3,2,1,6,4,2] -- [1,2,2,3,4,5,6,8] . note: sorts list in order providing element types are part of Ord typeclass
+DList.insert 4 [3,5,1,2,8,2] -- [1,2,2,3,4,5,8] . note: inserts element between a value smaller than it and a value its smaller than. useful if the list is already sorted
