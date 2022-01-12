@@ -1,6 +1,6 @@
 # Haskell
 
-Haskell is a language centered around the 'functional programming' paradigm - nearly all functions are 'pure functions' (ie functionality MUST run with the same output given the same input, no alterations to the state of the host computer).
+Haskell is a language centered around the 'functional programming' paradigm - nearly all functions are 'pure functions' (ie functionality MUST run with the same output given the same input, no alterations to the state of it's host).
 
 As with many programming languages, it is organised modularly, but the concept of pure functions allows us to view and test each function independently without worrying about the rest of the program having issues with it etc.
 

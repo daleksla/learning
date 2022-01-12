@@ -1,15 +1,15 @@
 {-
   This is the file strings.hs
   In this file will be examples of strings and relevant operations
-  Summary: Creating: "<text>". Concatenating: "<text>" ++ "<text>"
+  Summary: String [Char] != Char . Creating: "<text>".
+  ADDITIONAL: Possible string operations can be viewed in the operations section of lists.hs (strings are a shorthand char array)
 -}
 
 -- creating strings
-"hello" -- "hello". note: strings are enclosed within double quotations. You may see it reported as [Char]
+string1 = "hello" -- "hello". note: strings are enclosed within double quotations. You may see it reported as [Char]
 -- 'h' -- 'h'. note: THIS IS NOT A STRING. in Haskell this is of type 'Char'
-string1 = "My long \
+string2 = "My long \
 \string." -- \ escape allows for multiline string creation
+string3 = ['a', 'b', 'c'] -- "abc" . note: a char array is a string
 
--- cocatenating strings
-"hello" ++ " " ++ "world" -- "hello world". note: three-string cocatenating operation, uses ++ operator between with each string
--- "hello" ++ ' ' ++ "world" -- ERROR. note: this does not work as ++ cannot concatenate Char objects, only [Char]
+-- SEE lists.hs for usage examples

@@ -1,6 +1,6 @@
 {-
   This is the file variables.hs
-  In this file will be examples of creating and manipulating
+  In this file will be examples of creating and showing basic usage of variables
   Summary: Creating: <variable_name> = <data>. Use variables anywhere you would use data. Placeholder data undefined triggers error upon actually being used
 -}
 
