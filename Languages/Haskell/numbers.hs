@@ -2,7 +2,9 @@
     This is the file numbers.hs
     In this file will be examples of standard numeric expressions and arithmetic
     Note: surrounding curly braces with a suceeding and preceeding hyphens inbetween serve as multi-line comment blocks
-    Summary: Operators: +, -, /, *. Different types of numbers: float, fractional, int. Cannot apply operations across all types.
+    Summary:
+        * Operators: +, -, /, *
+        * Different types of numbers: float, fractional, int. Note: cannot apply all operations across all types (ie. Int and Fractionals can't divide by each other)
 -}
 
 -- Following are examples of basic numerical expressions (including arithmetic)

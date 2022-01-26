@@ -16,7 +16,7 @@ It also has other features, such as:
   * Stackage - collection of over 2000 packages guaranteeing compatibility with each other
   * Hoogle - resource search engine to find relevant packages
 
-As with other programming languages, features such as variables, functions, modules, exceptions, I/O, data type creation etc. are available. Note that loops are absent.
+As with other programming languages, features such as variables, functions, modules, exceptions, I/O, data type creation etc. are available. Note that loops are absent (as loops encourage side effects and mutable states!).
 
 ***
 

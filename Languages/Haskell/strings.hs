@@ -1,8 +1,10 @@
 {-
   This is the file strings.hs
   In this file will be examples of strings and relevant operations
-  Summary: String [Char] != Char . Creating: "<text>". Many is* operations for characters in Data.Char module to test on characters within string,
-  ADDITIONAL: Possible string operations can be viewed in the operations section of lists.hs (strings are a shorthand char array). More functions available in Data.Char (at least for a strings individual characters) https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-Char.html
+  Summary:
+    * Creating: "<text>". 
+    * String [Char] != Char .
+    * Operations: Possible string operations can be viewed in the operations section of lists.hs (strings are a shorthand char array). More functions available in Data.Char (at least for a strings individual characters) https://hackage.haskell.org/package/base-4.14.0.0/docs/Data-Char.html
 -}
 
 import qualified Data.Char as DChar

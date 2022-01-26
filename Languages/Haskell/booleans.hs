@@ -1,7 +1,10 @@
 {-
     This is the file booleans.hs
     In this file will be examples of boolean expressions, such as comparisons and operations
-    Summary: boolean values: True, False. Comparison operators: <, <=, >, >=, ==, /=. Other boolean operators: not, ||, &&
+    Summary:
+        * boolean values: True, False.
+        * Comparison operators: <, <=, >, >=, ==, /=.
+        * Other boolean operators: not, ||, &&
 -}
 
 True -- True. Haskell positive boolean (1)
