@@ -9,8 +9,8 @@
         * From scratch: (<elem_1>, ..., <elem_n>)
         * 'Zipping' combines two lists by joining elements with the same index from the respective lists and creating a list of resultant tuples: zip <list_1> <list_2>
     * Extracting:
-        * Prelude.fst <tuple>
-        * Prelude.snd <tuple>
+        * Getting first element: Prelude.fst <tuple>
+        * Getting second element: Prelude.snd <tuple>
         * Note: fst and snd only work on pairs
 -}
 

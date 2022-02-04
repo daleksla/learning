@@ -8,8 +8,8 @@
             * high order functions: functions which either take in a function (similar to a function pointer like C), return one as output, or both
                 * many built in HOFs, such as map (maps provided function call to each element in a given list)
         * Calling: <function_name> arg1 ... argn . Note: use brackets or the $ symbol before a given component to set precedence
-        * Writing: 
-            * <function_name> arg1 ... argn = <func_body> . Note: Function names need to be lowercase. Body of functions is singularly expression. 
+        * Writing:
+            * <function_name> arg1 ... argn = <func_body> . Note: Function names need to be lowercase. Body of functions is singularly expression.
             * currying:
                 * currying is done directly by wrapping the partial call in brackets: <func_name> = (incomplete func calls) .
                 * currying indirectly is done by saving a call to a function w/o all its needed args:  <func_name> = <arg1> (no arg2 etc.).
@@ -41,7 +41,7 @@ applyTwice f x = f (f x)
 divideByTen = (/10) -- partial function declaration
 applyTwice divideByTen 123 -- pass func, number
 
--- see conditionals.hs regarding how to write function 'overloads' based off conditions not within the body of the function
+    -- see conditionals.hs regarding how to write function 'overloads' based off conditions not within the body of the function
 
 -- following is an example of calling functions
 putStrLn "hi" --  note: parantheses are NOT required for a function call. putStrLn is the function name, "hi" is a string provided as an argument
@@ -50,9 +50,9 @@ putStrLn "hi" --  note: parantheses are NOT required for a function call. putStr
 
 show (min 44 33) --  note: this example shows the output (as a string) of the result returning by 44 - 33. nested function call
 
-x = min 44 -- note: this is an example of Currying, a technique of translating a function that takes multiple arguments into evaluating a sequence of functions, each with a single argument. this is a partial function only and would be expressed as 44-y (we still need y!). 
+x = min 44 -- note: this is an example of Currying, a technique of translating a function that takes multiple arguments into evaluating a sequence of functions, each with a single argument. this is a partial function only and would be expressed as 44-y (we still need y!).
 x 33 -- 11. note: here we give it the y component, fulfilling the expression.
--- note: 
+-- note:
 
 (+) 1 5 -- 6 . note: calling infix add operator. wrapping brackets allows for a partial applied function call, which we then supply the args for straight after
 
