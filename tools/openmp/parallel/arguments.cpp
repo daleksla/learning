@@ -5,8 +5,8 @@
 
 /**
   * @brief File demoing different ways to pass data to a parallel code block
-  * By default, data declared in a global scope become shared when used in a parallel code block
   * There are different ways to pass data from a global scope (in relation to the scope the parallel block of code) to change these default settings - you should explicitly specify what option you want:
+    * To use data declared in a global scope directly (ie shared variable): shared(<var_name>)
     * To create a local, uninitialised copy of var (ie just its datatype): private(<var_name>)
         * This value is destroyed at the end of the code block's scope
     * To create a local, initialised copy of var (ie just its datatype): firstprivate(<var_name>)
@@ -23,7 +23,12 @@ int main()
 
     #pragma omp parallel num_threads(1)
     {
-        std::cout << "DEFAULT (shared): chances are this number is 13: " << var << std::endl ; // reason: var is referencing the global variable
+        std::cout << "implicit shared (DEFAULT): chances are this number is 13: " << var << std::endl ; // reason: var is referencing the global variable
+    }
+    // OR
+    #pragma omp parallel num_threads(1) shared(var)
+    {
+        std::cout << "explicit shared: chances are this number is 13: " << var << std::endl ; // reason: var is referencing the global variable
     }
 
     #pragma omp parallel private(var) num_threads(1)

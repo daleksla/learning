@@ -10,6 +10,7 @@
     * Note: the number of iterations must be known at COMPILE time - this is because OPENMP operates as a compile time library and unrolls the code it needs for a program to run at that time
     * For an iteration which has not been assigned a thread, it simply awaits till an iteration running on a thread has finished, upon which it seizes its thread and runs its own functionality.
     * Benefit of a threadpool involves not constantly creating and deleting threads, which is costly
+    * Note: For loops in OpenMP can take many more parameters (see variables.cpp, schedueling.cpp)
   */
 
 int main()
