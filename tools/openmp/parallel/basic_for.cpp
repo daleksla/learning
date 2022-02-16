@@ -5,7 +5,7 @@
 
 /**
   * @brief File demoing openmp usage when using for loops and how it operates behind the scenes
-    * Note: this file is only relevant to show a shorthand way to easily convert a sequential for loop into parallel code. If you genuinely want each thread to run several iterations, ignore this and see 'hello_omp.cpp'
+    * Note: this file is only relevant to show a shorthand way to easily convert a sequential for loop into parallel code. If you genuinely want each thread to run several iterations, ignore this and see 'hello_omp.cpp'. That being said, OpenMP bloody specialises in for loops
   * OpenMP makes use of a threadpool to execute for loops - it automatically creates a thread for each processor a host system has or as many threads as the for loop mandates (whichever is smaller) and executes each iteration of the for loop in parallel.
     * Note: the number of iterations must be known at COMPILE time - this is because OPENMP operates as a compile time library and unrolls the code it needs for a program to run at that time
     * For an iteration which has not been assigned a thread, it simply awaits till an iteration running on a thread has finished, upon which it seizes its thread and runs its own functionality.

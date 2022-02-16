@@ -5,7 +5,7 @@
 
 /**
   * @brief File demoing basic openmp usage and how it operates behind the scenes
-  * OpenMP works by abstracting away many features of threading.For example, in standard C++, you would have to manually create a `std::thread` for each functionality you wished to perform (technically this is concurrency but whatever). However OpenMP deduces the number of CORES on ones system and runs a given block of code on each core
+  * OpenMP works by abstracting away many features of threading.cFor example, in standard C++, you would have to manually create a `std::thread` for each functionality you wished to perform (technically this is concurrency but whatever). However OpenMP deduces the number of CORES on ones system and runs a given block of code on each core
   * Creating / parallelising:
     * Creating code to run as parallel:
         * Note: the code to be ran as should be placed within a lexical scope brackets (ie. {})
@@ -41,6 +41,14 @@ int main()
             std::cout << "I'm in a threadpool of 4 but im the master thread, I only run once!" << std::endl ;
         }
     }
+
+	#pragma omp parallel num_threads(4)
+   {
+        #pragma omp critical
+        {
+            std::cout << "I'm in a threadpool of 4 but im a critical section so everything stops so I can run!" << std::endl ;
+        }
+   }
 
 	return 0 ;
 }
