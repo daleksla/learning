@@ -1,5 +1,5 @@
 /*
-    * This file contains how to derive new rules using conditional statements
+    * This file contains how to derive new terms using conditional statements
     * We can generate new rules using one or more existing rules
     * The if keyword is represented by a colon and a hyphen (':-')
     * Boolean combiner 'and' is represented using commas (',') and 'or' is represented using semicolons (';')
