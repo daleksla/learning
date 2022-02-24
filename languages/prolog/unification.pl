@@ -19,12 +19,14 @@
         * eg date(X, jan, 2021) unifies with date(25, jan, Y)
             * structure identifiers and arity matches, X CAN unify with 25, both jan symbolic constants match, 2021 can unify with Y
 
-    * '=' (unification predicate): used to trigger unification
-        * '\=' (negation of unification) : succeeds upon failure to unify
-    * '==' (equality): compares whether two sides show the same expressions
-        * Unlike '=', does not perform full unification such that unbound variables will not be assigned to to make unification occur
-        * '\=' performs negation of the aforementioned
-    * NEITHER OF THESE ARE TRUE COMPARISON. see variables.pl for the workaround for this which is one of the main purposes of variables
+
+    * Following predicates resolve syntactic equivalence:
+        * '=' (unification predicate): used to trigger unification
+            * '\=' (negation of unification) : succeeds upon failure to unify
+        * '==' (equality): compares whether two sides show the same expressions
+            * Unlike '=', does not perform full unification such that unbound variables will not be assigned to to make unification occur - it assumes variables are ALREADY BOUND
+            * '\=' performs negation of the aforementioned
+        * NEITHER OF THESE ARE SEMANTIC EQUIVALENCE - see variables.pl for that
 */
 
 isZero1(X) :-
