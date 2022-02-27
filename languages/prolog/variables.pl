@@ -23,7 +23,7 @@
 % using variables
 
 isZeroBest(X) :-
-    0 is X % providing X is assigned to, will return True.
+    0 is X % providing X is assigned to as 0, will return True. wont work otherwise
 
 % using variables to return values
 
