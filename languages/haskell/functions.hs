@@ -7,18 +7,23 @@
             * regular functions: takes in regular data
             * high order functions: functions which either take in a function (similar to a function pointer like C), return one as output, or both
                 * many built in HOFs, such as map (maps provided function call to each element in a given list)
-        * Calling: <function_name> arg1 ... argn . Note: use brackets or the $ symbol before a given component to set precedence
+        * Calling:
+            * <function_name> arg1 ... argn .
+            * Note: use brackets or the $ symbol before a given component to set precedence
         * Writing:
-            * <function_name> arg1 ... argn = <func_body> . Note: Function names need to be lowercase. Body of functions is singularly expression.
+            * <function_name> arg1 ... argn = <func_body>
+                * Function names need to be lowercase. Body of functions is singularly expression.
             * currying:
                 * currying is done directly by wrapping the partial call in brackets: <func_name> = (incomplete func calls) .
                 * currying indirectly is done by saving a call to a function w/o all its needed args:  <func_name> = <arg1> (no arg2 etc.).
                 * The args for both types of currying can then be supplied later: <func_name> <arg2 etc.>
-            * Point free function: <func_name> = (<func-name/operator>) . Note: no reference to args needed, they're assumed and directly applied to the relevant specified operator/func, stored as partial call / curried (hence bracket'd).
+            * Point free function:
+                * syntax:  <func_name> = (<func-name>)
+                * (where arguments do not need to be explicitly stated due to assumption based on function body)
             * Lambda functions are functions not saved to a name, but can nonetheless be used like one. Syntax: (\ <arg1> <argn> -> <operation>) . Note: lambda functions are wrapped in brackets and start with a \ symbol. Each arg is seperated by a space, followed by an arrow and an operation.
             * Writing functions which returns a value based on dependant on a condition (value/pattern matching) is also common (see conditionals.hs) (theyre all conditional so THATS WHY THEYRE THERE!)
         * Function signatures:
-            * Shows inputs, outputs of function e.g. <name> :: <input type class> a => a -> a , where the 'Num a =>' part says that type is instance of Num and the 'a -> a' segment says that the function takes an input of type a and returns an output of the same type
+            * Shows inputs, outputs of function e.g. <name> :: <input type> -> <output_type>, which can be read as <input_type> is mapped onto data of type <output_type>
             * Regular functions have a function signature as above
             * High order functions signature encompasses the function signature of the function it calls: applyTwice :: (a -> a) -> a -> a
 -}
