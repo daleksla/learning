@@ -22,10 +22,15 @@
                 * (where arguments do not need to be explicitly stated due to assumption based on function body)
             * Lambda functions are functions not saved to a name, but can nonetheless be used like one. Syntax: (\ <arg1> <argn> -> <operation>) . Note: lambda functions are wrapped in brackets and start with a \ symbol. Each arg is seperated by a space, followed by an arrow and an operation.
             * Writing functions which returns a value based on dependant on a condition (value/pattern matching) is also common (see conditionals.hs) (theyre all conditional so THATS WHY THEYRE THERE!)
-        * Function signatures:
-            * Shows inputs, outputs of function e.g. <name> :: <input type> -> <output_type>, which can be read as <input_type> is mapped onto data of type <output_type>
-            * Regular functions have a function signature as above
-            * High order functions signature encompasses the function signature of the function it calls: applyTwice :: (a -> a) -> a -> a
+        * Function / types signatures:
+            * Shows types and number inputs, outputs of a given function
+            * Basic syntax:
+                * <name> :: <input type> -> <output_type>
+                * ...which can be read as <input_type> is mapped onto data of type <output_type>
+            * When involving generic typeclass':
+                * <name> :: <generic_typeclass> a => <normal type signature using 'a' rather than specific types>
+            * High order functions signature encompasses the function signature of the functions provided
+                * applyTwice :: (a -> a) -> a -> a
 -}
 
 -- following is an example of defining a function. THEY MUST start with a lower case letter OR an underscore. They can include letters, digits, underscores (_) and even single forward quotes (')
