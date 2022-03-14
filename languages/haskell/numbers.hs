@@ -1,10 +1,13 @@
 {-
     This is the file numbers.hs
-    In this file will be examples of standard numeric expressions and arithmetic
+    In this file will be examples of basic standard numeric expressions and arithmetic
     Note: surrounding curly braces with a suceeding and preceeding hyphens inbetween serve as multi-line comment blocks
+
     Summary:
+
         * Operators: +, -, /, *
-        * Different types of numbers: float, fractional, int. Note: cannot apply all operations across all types (ie. Int and Fractionals can't divide by each other)
+
+        * Different types of numbers: float, fractional, int. Note: cannot apply all operations across all types (ie. Int and Fractionals can't divide by each other) (see typeclasses.hs for a detailed look into the system these numbers use as well as what haskell uses to create abstract types)
 -}
 
 -- Following are examples of basic numerical expressions (including arithmetic)

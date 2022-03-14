@@ -1,12 +1,15 @@
 {-
     This is the file modules.hs
     In this file will be examples of declaring, importing and making use of modules in Haskell
+
     Summary:
+
         * Importing:
             * Importing into global namespace: import <module_name> .
             * Importing module as contained namespace: import qualified <module_name> .
+
         * Creating:
-            * To create a module: module <moduleName>( <exported_functions> ) where <all function definitions> . 
+            * To create a module: module <moduleName>( <exported_functions> ) where <all function definitions> .
             * Save the module in a file called <moduleName>.hs
 -}
 

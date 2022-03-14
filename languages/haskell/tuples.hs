@@ -1,13 +1,17 @@
 {-
   This is the file tuples.hs
   In this file will be examples of creating and showing basic usage of tuple containers
+
   Summary:
+
     * Tuple are stored to pass and return multiple bits of data. Unlike lists, they can store different data types
         * Note: tuples are defined by the types they hold and THE LENGTH
         * Note: a tuple with two elements sn commonly used and is thus referred to as a 'pair'
+
     * Creating:
         * From scratch: (<elem_1>, ..., <elem_n>)
         * 'Zipping' combines two lists by joining elements with the same index from the respective lists and creating a list of resultant tuples: zip <list_1> <list_2>
+
     * Extracting:
         * Getting first element: Prelude.fst <tuple>
         * Getting second element: Prelude.snd <tuple>

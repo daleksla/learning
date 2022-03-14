@@ -2,32 +2,42 @@
     This is the file functions.hs
     In this file contains examples of calling and writing functions
     Summary:
+
         * Functions are a central concept in Haskell - they are the default command / operation assumed unless an operator etc. is found appropriately
+
         * Two types:
             * regular functions: takes in regular data
             * high order functions: functions which either take in a function (similar to a function pointer like C), return one as output, or both
                 * many built in HOFs, such as map (maps provided function call to each element in a given list)
+
         * Calling:
             * <function_name> arg1 ... argn .
             * Note: use brackets or the $ symbol before a given component to set precedence
+
         * Writing:
+
             * <function_name> arg1 ... argn = <func_body>
                 * Function names need to be lowercase. Body of functions is singularly expression.
+
             * currying:
                 * currying is done directly by wrapping the partial call in brackets: <func_name> = (incomplete func calls) .
                 * currying indirectly is done by saving a call to a function w/o all its needed args:  <func_name> = <arg1> (no arg2 etc.).
                 * The args for both types of currying can then be supplied later: <func_name> <arg2 etc.>
+
             * Point free function:
                 * syntax:  <func_name> = (<func-name>)
                 * (where arguments do not need to be explicitly stated due to assumption based on function body)
+
             * Lambda functions are functions not saved to a name, but can nonetheless be used like one. Syntax: (\ <arg1> <argn> -> <operation>) . Note: lambda functions are wrapped in brackets and start with a \ symbol. Each arg is seperated by a space, followed by an arrow and an operation.
+
             * Writing functions which returns a value based on dependant on a condition (value/pattern matching) is also common (see conditionals.hs) (theyre all conditional so THATS WHY THEYRE THERE!)
+
         * Function / types signatures:
-            * Shows types and number inputs, outputs of a given function
+            * Shows types and number inputs, outputs of a given function (see types.hs)
             * Basic syntax:
                 * <name> :: <input type> -> <output_type>
                 * ...which can be read as <input_type> is mapped onto data of type <output_type>
-            * When involving generic typeclass':
+            * When involving generic typeclass' (see type):
                 * <name> :: <generic_typeclass> a => <normal type signature using 'a' rather than specific types>
             * High order functions signature encompasses the function signature of the functions provided
                 * applyTwice :: (a -> a) -> a -> a

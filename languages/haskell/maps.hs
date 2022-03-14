@@ -2,9 +2,12 @@
   This is the file maps.hs
   In this file will be examples of creating and showing basic usage of associative arrays / maps
   Summary:
+
     * Maps are a collection of key->value bindings
         * Note: maps are defined as a list of pairs (see tuples.hs) of strictly type a and b ( e.g. [(Num, [Char])] )
+
     * Creating: [ (key, val), (key, val) ]
+
     * Extracting: lookup <key> <dict> . Note: has function signature of lookup :: Eq a => a -> [(a, b)] -> Maybe b
         * ... where 'Maybe' is a typeclass datatype constructor (datatype constructor = a datatype which needs another type to properly form)
         * ... instances are 'Just' (ie associated when values are found) and 'Nothing' (ie when values are not)

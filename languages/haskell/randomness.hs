@@ -1,13 +1,16 @@
 {-
     This is the file randomness.hs
     In Haskell, (pseudo) random number generation still requires a functional programming approach. Note: all functionality found in System.Random.
+
     Summary:
+
         * Creating random number generator:
             * Manually creating random number generator: mkStdGen <seed>
             * Using system: getStdGen
                 * Note: this returns IO action. Extract generator using `<-` (see monads.hs, io.hs)
                 * Can therefore only run in main
             * NOTE: calling a random function using these generators will always give you the same result. It would be best if one were to write a program reading from /dev/urandom (for example) and use such a value for seeding
+
         * Generating random number:
             * Single number: (<rand_num>, <num_representation_of_num_generator>) = random <rand_num_generator> / randomR <tuple_range> <rand_num_generator>
                 * Returns both a random number and a new random number 'generator' (in text form)

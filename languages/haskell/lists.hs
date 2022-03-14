@@ -1,13 +1,17 @@
 {-
     This is the file lists.hs
     In this file will be examples of lists and related operations
+
     Summary:
         * lists must store items of same datatypes.
+
         * Creation:
             * Declaring values explicitly: [<val1>,...,<valn>]
             * Ranges: [<val1>..<valn>]
             * List comprehension: [<val> | <val> <- <list1>]
+
         * Access operator: <list_name> !! <idx> .
+
         * Operations:
             * Prepending: <element> : <list> .
             * Length: length <list>
@@ -54,9 +58,9 @@ foldl1 (\ total x -> total + x) [1,2,3] -- 6 . note: example of foldl1 function 
 minimum myList4 -- 'a' . note: returns minimum value found in a given list
 maximum myList3 -- 12 . note: returns maximum value found in a given list
 
-['a', 'b', 'c'] ++ ['d'] -- "abcd". note: concat method. 
+['a', 'b', 'c'] ++ ['d'] -- "abcd". note: concat method.
 -- note: above is also only way to append values is to wrap in list then concat. (o(n) of dst list size - not recommended)
-myList1 ++ myList2 -- [0,1,2,3,0,1,2,3] 
+myList1 ++ myList2 -- [0,1,2,3,0,1,2,3]
 
 'h' : 'i' : ' ' : "i am salih" -- "hi i am salih" . note: prepend method in action. right to left (ie space added to start, then i then h). note: adds ELEMENTS (must be char in this example)
 
@@ -69,7 +73,7 @@ map addOne [1,2,3] -- [2,3,4] . note: map is a keyword which applies a given fun
 
 my_test elem = elem /= 0 -- generic func.
 any my_test [0,2,3] -- True . note: any returns boolean truth on whether any elements passed a given test
-all my_test [0,2,3] -- False . note: all returns boolean truth on whether all elements passed a given test 
+all my_test [0,2,3] -- False . note: all returns boolean truth on whether all elements passed a given test
 
 4 `elem` [1,2,3,4] -- True . note: elem takes two args so its nice as infix notation style. detects whether x is an element of y
 

@@ -1,29 +1,33 @@
 {-
     This is the file conditionals.hs
     In this file contains examples of writing conditional statements (if statements, case statements)
+
     Summary:
-        * Creating:
-            * If statements:
-                * Singular ifs: if <condition> then <true_branch> else <false_branch>
-                * Nested ifs: if <condition> then <true_branch> else (if <nested_condition> then <nested_true> else <nested_false>)
-                * Note: there are no else if statements, so nested statements is how to achieve something similar
-            * Case Expressions:
-                * Creating: case <variable> of <case1> -> <branch1>
-                                               <caseN> -> <branchN>
-            * Value/Pattern matching:
-                * Can be made by declaring multiple versions of a FUNCTION, where the parameters are explicitly declared to match a specific value or condition
-                * If defining by a specific value / pattern: <func_name> <specified_val/pattern> = ...
-                                                             ...
-                                                             <func_name> <param_name> = ... -- serves as generic case
-                * If a conditional operation is required to ascertain the value to return: <func_name> <param> 
-                                                                                               | <condition> = ...
-                                                                                               ...
-                                                                                               | otherwise = ... -- generic case
-                    * Note: where clause can be put under all these conditions to calculate the value once, store that result in a variable / name and use it within the above conditions
-        * Using:
-            * You can store as a variable as usual: var = <if statement>
-            * You can directly use the if statement as part of an expression: (<if statement>) + 1
-        * If expressions are not better supported in Haskell is that they are rarely used
+        * Note: all conditional branches must return the same type AND must therefore cover all cases of a given input lest an error be thrown.
+
+        * If statements:
+            * Singular ifs: if <condition> then <true_branch> else <false_branch>
+            * Nested ifs: if <condition> then <true_branch> else (if <nested_condition> then <nested_true> else <nested_false>)
+            *    Note: there are no else if statements, so nested statements is how to achieve something similar
+
+        * Case Expressions:
+            * Creating: case <variable> of <case1> -> <branch1>
+                                           ...
+                                           <caseN> -> <branchN>
+
+        * Value/Pattern matching:
+            * Can be made by declaring multiple versions of a FUNCTION, where the parameters are explicitly declared to match a specific value or condition
+            * Syntax: <func_name> <specified_val/pattern> = ...
+                      ...
+                      <func_name> <param_name> = ... -- serves as generic case
+
+        * Function guards can be used where conditional overloading is concerned:
+            * Syntax: <func_name> <param>
+                             | <condition> = ...
+                             | ...
+                             | otherwise = ... -- generic case
+                    * Note: if a calculation is performed on input value in each condition, you can make use of where-clause (see variables.hs) for efficiency
+
 -}
 
 -- following are examples of creating if statements
@@ -77,8 +81,5 @@ classification listOfGrades -- same as above BUT input is list and need a value 
     | av >= 50 = "Lower Second"
     | av >= 40 = "Third"
     | otherwise = "Fail"
-    where -- where clause can be appended to a function return expression to provide name bindings that will hold only in the scope of that expression. must be indented to function header
+    where -- where clause can be appended to a function. provide name bindings as part of function syntax and therefire us available in every branch
          av = (sum listOfGrades) / (length listOfGrades) -- here we can create a variable rather than compute the value within each clause
-
-
-

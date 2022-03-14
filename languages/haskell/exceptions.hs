@@ -2,6 +2,7 @@
     This is the file exceptions.hs
     Generally, exception catching should be kept minimal. For example, if a function fails to produce a coventional answer, the Haskell approach would be to encode the output type using Maybe rather than produce an exception
     However, one may use it when dealing with the outside world, i.e. with I/O actions and other impure code
+
     Summary:
         * Catching errors: catch <func_to_try> <exception_handler>
         * Handler:
