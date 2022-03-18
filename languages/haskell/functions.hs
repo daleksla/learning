@@ -20,9 +20,11 @@
                 * Function names need to be lowercase. Body of functions is singularly expression.
 
             * currying:
-                * currying is done directly by wrapping the partial call in brackets: <func_name> = (incomplete func calls) .
-                * currying indirectly is done by saving a call to a function w/o all its needed args:  <func_name> = <arg1> (no arg2 etc.).
-                * The args for both types of currying can then be supplied later: <func_name> <arg2 etc.>
+                *currying is the way functions are called in haskell - always evaluates functions gradually one argument at a time producing other functions as intermediate steps
+                * two ways of perform partial application (performing part of the function):
+                    * simply calling a function w/o all its needed args: <curried_func_name> = <arg1> (no arg2 etc.).
+                    * wrapping the partial call in brackets: <curried_func_name> = (incomplete func calls) .
+                * The args for both types of currying can then be supplied later: <curried_func_name> <arg2 etc.>
 
             * Point free function:
                 * syntax:  <func_name> = (<func-name>)

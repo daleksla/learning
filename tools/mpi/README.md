@@ -2,6 +2,8 @@
 
 MPI (Message Passing Interface implementation) is a portable messaging passing standard for parallel and distributed computing systems. MPI provides parallel hardware vendors with a clearly defined set of routines which can be efficiently implemented, and is thus optimised for each system. It is available in C/C++ (this repository's language of choice) Fortran, C#, Java and Python, and is a testament to it's high level of portability.
 
+Note: this folder shows how to use raw basic MPI (ie. without bindings such from the Boost library)
+
 ***
 
 To build these files: `mpicxx <filename>.cpp`
