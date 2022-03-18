@@ -4,20 +4,40 @@
 
 /**
   * @brief File demonstrating basic skeleton of programs using MPI
-  * MPI_Init() creates all MPI's global and internal variables
+
+  * MPI_Init(int*, char**) creates all MPI's global and internal variables
+    * Two params - &argc, &argv to provide environmental information
+    * If you don't care, assign NULL to both
+    * One such variable created by former function is MPI_COMM_WORLD which is a default communicator object
+  
+  * MPI_Comm_size(MPI_Comm, int*) - determines the size of the group associated with a communicator
+    * Two params - communicator / handle object and pointer int to store result 
+  
+  * MPI_Comm_rank(MPI_Comm, int*) - determines the rank of the calling process in the communicator 
+    * Two params - communicator / handle object and pointer to int to store results
+  
+  * MPI_Get_processor_name(char*, int*) - provides unique specifier for the actual (as opposed to virtual) node
+    * Two params - array of at least MPI_MAX_PROCESSOR_NAME (MPI value) characters, length of character in the given name
+  
+  * MPI_Finalize() - terminates MPI execution environment
+    * It is suggested to simply return and exit after this point as opposed to perform heavy computation
+
   */
 
 int main(int argc, char** argv)
 {
     MPI_Init(nullptr, nullptr) ; // initialise the MPI environment
 
-    int world_size ; // Get the number of processes
+    /* Get number of nodes also in world  */
+    int world_size ;
     MPI_Comm_size(MPI_COMM_WORLD, &world_size) ;
 
-    int world_rank ; // Get the rank of the process
+    /* Get rank of processing node */
+    int world_rank ;
     MPI_Comm_rank(MPI_COMM_WORLD, &world_rank) ;
 
-    char processor_name[MPI_MAX_PROCESSOR_NAME] ; // Get the name of the processor
+    /* Get name of current processing node */
+    char processor_name[MPI_MAX_PROCESSOR_NAME] ; // assign relevant memory
     int name_len ;
     MPI_Get_processor_name(processor_name, &name_len);
 
