@@ -99,12 +99,12 @@ int main(int argc, char** argv)
     {
         int name_len ; MPI_Get_processor_name(data.host_name, &name_len) ;
         data.id = 0 ;
-        MPI_Send(&data, 1, my_data_type_mpi_type, 1, 0, MPI_COMM_WORLD) ; // send to node rank 1
+        MPI_Send(&data, 1, my_data_type_mpi_type, 1, 0, MPI_COMM_WORLD) ; // send 1 item of data to node rank 1
         std::cout << "Data sent from communicator: \"" << data << '\"' << std::endl ;
     }
     else if(world_rank == 1) // child node
     {
-        MPI_Recv(&data, world_rank, my_data_type_mpi_type, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE) ;
+        MPI_Recv(&data, 1, my_data_type_mpi_type, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE) ; // get one item of data from node rank 0
         std::cout << "Process " << world_rank << " received data \"" << data << "\" from communicator node" << std::endl ;
     }
 

@@ -59,11 +59,11 @@ int main(int argc, char** argv)
     {
         number = -1 ;
         std::cout << "Communicator sending value " << number << "to nodes" << std::endl ;
-        MPI_Send(&number, 1, MPI_INT, 1, 0, MPI_COMM_WORLD) ; // send to node rank 1
+        MPI_Send(&number, 1, MPI_INT, 1, 0, MPI_COMM_WORLD) ; // send one item of data to node rank 1
     }
     else if(world_rank == 1) // child node
     {
-        MPI_Recv(&number, world_rank, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE) ;
+        MPI_Recv(&number, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE) ; // receive one item of data from node rank 0 (head / communicator)
         std::cout << "Process " << world_rank << " received number " << number << " from communicator node" << std::endl ;
     }
 
