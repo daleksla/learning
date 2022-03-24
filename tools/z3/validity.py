@@ -2,9 +2,10 @@
     * @brief File demonstrates how to perform validiation using the z3 SAT/SMT solver
 
     * z3 is a tool to prove satisfiability of a given constraint (ie finds an *instance* of an assignment to a variable such that the constraint evaluates to true)
-    * Validity however is where a constraint, not matter the assignments made, always evaluates to true
-    * z3 *can* be used to validate constraints by simply determining whether the NOT of a constraint is ever false - if it ever is, then it is not validated
 
+    * Validity however is where a constraint, not matter the assignments made, always evaluates to true
+
+    * z3 *can* be used to validate constraints by simply determining whether the NOT of a constraint is ever false - if it ever is, then it is not validated
 
 """
 
